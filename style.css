@@ -1,0 +1,39 @@
+html{
+	margin: 0;
+	height: 100%;
+}
+body{
+	margin: 0;
+	height: 100%;
+}
+header{
+	text-align: right;
+	background-color: red;
+}
+.right_side{
+	background-color: yellow;
+	width: 80%;
+	height: 100%;
+	display: inline-block;
+	float: right;
+}
+.left_menu{
+	background-color: orange;
+	width: 20%;
+	height: 100%;
+	display: inline-block;
+	float: left;
+}
+.company{
+
+}
+.money{
+	padding-right: 20px;
+	padding-left: 20px;	
+}
+.wheat{
+	background-color: brown;
+}
+.shop{
+	display: none;
+}

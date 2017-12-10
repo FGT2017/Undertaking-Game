@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Top Tap Buisness</title>
+	<meta charset="utf-16">
+</head>
+<body>
+	<div class="left_menu">
+		<button onclick="main()">Főoldal</button>
+		<button onclick="shop()">Áruház</button>
+	</div>
+	<div class="right_side">
+		<header>
+			<span id="your_wheat" class="wheat"></span>
+			<span id="your_rice" class="wheat"></span>
+			<span id="your_corn" class="wheat"></span>
+			<span id="your_carrot" class="wheat"></span>
+			<span class="money">Pénzed:
+				<span id="your_money"></span>
+			</span>
+		</header>
+		<div class="company">
+			<div id="shop" class="shop">
+				<div>Búza
+					<button onclick="buy_wheat()">Vétel: 100/db</button>
+				</div>
+				<div>Rizs
+					<button onclick="buy_rice()">Vétel: 78/db</button>
+				</div>
+				<div>Kukorica
+					<button onclick="buy_corn()">Vétel: 150/db</button>
+				</div>
+				<div>Répa
+					<button onclick="buy_carrot()">Vétel: 200/db</button>
+				</div>
+			</div>
+			<div id="main" class="main">
+				<div>
+					Főoldal
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="scripts.js"></script>
+</body>
+</html>
