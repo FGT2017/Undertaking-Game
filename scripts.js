@@ -121,7 +121,7 @@
 			your_xp -= 15000;
 		}
 		
-		document.getElementById("your_xp").innerHTML = your_level + " xp";
+		document.getElementById("your_xp").innerHTML = your_xp + " xp";
 		document.getElementById("your_level").innerHTML = your_level + ".";
 	}
 	
