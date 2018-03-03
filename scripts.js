@@ -2,13 +2,13 @@
 
 	var your_money = 10000;
 	var your_xp = 0;
-	var your_level = 1;
+	var your_level = 0;
 
 	document.getElementById("your_money").innerHTML = "£" + your_money;
 	document.getElementById("your_xp").innerHTML =  your_xp + " xp";
 	document.getElementById("your_level").innerHTML = your_level + "."; 
 
-//----------------------------------SORAGE-----------------------------------
+//----------------------------------STORAGE-----------------------------------
 
 	//-------------------------INGREDIENTS-----------------------
 
@@ -79,225 +79,50 @@
 		document.getElementById("your_walnut").innerHTML = "Diód: " + your_walnut;
 
 //----------------------------------LEVELUP-------------------------------------
-
-	function levelup001() {
-		if (your_xp >= 1000) {
+	function levelUp(){
+		if(your_xp >= 1000 && your_xp < 2000 && your_level ==0){
 			your_level += 1;
 			your_xp -= 1000;
-			document.getElementById("your_xp").innerHTML = your_level + " xp";
-			document.getElementById("your_level").innerHTML = your_level + ".";
-			document.getElementById("levelup001").style.display = "none";
-			document.getElementById("levelup002").style.display = "inline-block";	
-			document.getElementById("levelup003").style.display = "none";
-			document.getElementById("levelup004").style.display = "none";
-			document.getElementById("levelup005").style.display = "none";
-			document.getElementById("levelup006").style.display = "none";
-			document.getElementById("levelup007").style.display = "none";
-			document.getElementById("levelup008").style.display = "none";
-			document.getElementById("levelup009").style.display = "none";
-			document.getElementById("levelup010").style.display = "none";
 		}
-		else{
-			alert('Nincs elég pontod!')
-		}
-	}
-
-	function levelup002() {
-		if (your_xp >= 2000) {
+		if(your_xp >= 2000 && your_xp < 3000 && your_level == 1){
 			your_level += 1;
 			your_xp -= 2000;
-			document.getElementById("your_xp").innerHTML = your_level + " xp";
-			document.getElementById("your_level").innerHTML = your_level + ".";
-			document.getElementById("levelup001").style.display = "none";
-			document.getElementById("levelup002").style.display = "none";
-			document.getElementById("levelup003").style.display = "inline-block";
-			document.getElementById("levelup004").style.display = "none";
-			document.getElementById("levelup005").style.display = "none";
-			document.getElementById("levelup006").style.display = "none";
-			document.getElementById("levelup007").style.display = "none";
-			document.getElementById("levelup008").style.display = "none";
-			document.getElementById("levelup009").style.display = "none";
-			document.getElementById("levelup010").style.display = "none";
 		}
-		else{
-			alert('Nincs elég pontod!')
-	}
-	}
-
-	function levelup003() {
-		if (your_xp >= 4000) {
+		if(your_xp >= 3000 && your_xp < 4000 && your_level == 2){
+			your_level += 1;
+			your_xp -= 3000;
+		}
+		if(your_xp >= 4000 && your_xp < 5000 && your_level == 3){
+			your_level += 1;
+			your_xp -= 3000;
+		}
+		if(your_xp >= 5000 && your_xp < 6000 && your_level == 4){
 			your_level += 1;
 			your_xp -= 4000;
-			document.getElementById("your_xp").innerHTML = your_level + " xp";
-			document.getElementById("your_level").innerHTML = your_level + ".";
-			document.getElementById("levelup001").style.display = "none";
-			document.getElementById("levelup002").style.display = "none";
-			document.getElementById("levelup003").style.display = "none";
-			document.getElementById("levelup004").style.display = "inline-block";
-			document.getElementById("levelup005").style.display = "none";
-			document.getElementById("levelup006").style.display = "none";
-			document.getElementById("levelup007").style.display = "none";
-			document.getElementById("levelup008").style.display = "none";
-			document.getElementById("levelup009").style.display = "none";
-			document.getElementById("levelup010").style.display = "none";
 		}
-		else{
-			alert('Nincs elég pontod!')
+		if(your_xp >= 6000 && your_xp < 7000 && your_level == 5){
+			your_level += 1;
+			your_xp -= 5000;
 		}
-	}
-
-	function levelup004() {
-		if (your_xp >= 7000) {
+		if(your_xp >= 7000 && your_xp < 8000 && your_level == 6){
 			your_level += 1;
 			your_xp -= 7000;
-			document.getElementById("your_xp").innerHTML = your_level + " xp";
-			document.getElementById("your_level").innerHTML = your_level + ".";
-			document.getElementById("levelup001").style.display = "none";
-			document.getElementById("levelup002").style.display = "none";
-			document.getElementById("levelup003").style.display = "none";
-			document.getElementById("levelup004").style.display = "none";
-			document.getElementById("levelup005").style.display = "inline-block";
-			document.getElementById("levelup006").style.display = "none";
-			document.getElementById("levelup007").style.display = "none";
-			document.getElementById("levelup008").style.display = "none";
-			document.getElementById("levelup009").style.display = "none";
-			document.getElementById("levelup010").style.display = "none";
 		}
-		else{
-			alert('Nincs elég pontod!')
-		}
-	}
-
-	function levelup005() {
-		if (your_xp >= 11000) {
+		if(your_xp >= 8000 && your_xp < 9000 && your_level == 7){
 			your_level += 1;
-			your_xp -= 11000;
-			document.getElementById("your_xp").innerHTML = your_level + " xp";
-			document.getElementById("your_level").innerHTML = your_level + ".";
-			document.getElementById("levelup001").style.display = "none";
-			document.getElementById("levelup002").style.display = "none";
-			document.getElementById("levelup003").style.display = "none";
-			document.getElementById("levelup004").style.display = "none";
-			document.getElementById("levelup005").style.display = "none";
-			document.getElementById("levelup006").style.display = "inline-block";
-			document.getElementById("levelup007").style.display = "none";
-			document.getElementById("levelup008").style.display = "none";
-			document.getElementById("levelup009").style.display = "none";
-			document.getElementById("levelup010").style.display = "none";
+			your_xp -= 8000;
 		}
-		else{
-			alert('Nincs elég pontod!')
-		}
-	}
-
-	function levelup006() {
-		if (your_xp >= 16000) {
+		if(your_xp >= 9000 && your_xp < 10000 && your_level == 8){
 			your_level += 1;
-			your_xp -= 16000;
-			document.getElementById("your_xp").innerHTML = your_level + " xp";
-			document.getElementById("your_level").innerHTML = your_level + ".";
-			document.getElementById("levelup001").style.display = "none";
-			document.getElementById("levelup002").style.display = "none";
-			document.getElementById("levelup003").style.display = "none";
-			document.getElementById("levelup004").style.display = "none";
-			document.getElementById("levelup005").style.display = "none";
-			document.getElementById("levelup006").style.display = "none";
-			document.getElementById("levelup007").style.display = "inline-block";
-			document.getElementById("levelup008").style.display = "none";
-			document.getElementById("levelup009").style.display = "none";
-			document.getElementById("levelup010").style.display = "none";
+			your_xp -= 9000;
 		}
-		else{
-			alert('Nincs elég pontod!')
-		}
-	}
-
-	function levelup007() {
-		if (your_xp >= 22000) {
+		if(your_xp >= 15000 && your_level == 9){
 			your_level += 1;
-			your_xp -= 22000;
-			document.getElementById("your_xp").innerHTML = your_level + " xp";
-			document.getElementById("your_level").innerHTML = your_level + ".";
-			document.getElementById("levelup001").style.display = "none";
-			document.getElementById("levelup002").style.display = "none";
-			document.getElementById("levelup003").style.display = "none";
-			document.getElementById("levelup004").style.display = "none";
-			document.getElementById("levelup005").style.display = "none";
-			document.getElementById("levelup006").style.display = "none";
-			document.getElementById("levelup007").style.display = "none";
-			document.getElementById("levelup008").style.display = "inline-block";
-			document.getElementById("levelup009").style.display = "none";
-			document.getElementById("levelup010").style.display = "none";
+			your_xp -= 15000;
 		}
-		else{
-			alert('Nincs elég pontod!')
-		}
-	}
-
-	function levelup008() {
-		if (your_xp >= 29000) {
-			your_level += 1;
-			your_xp -= 29000;
-			document.getElementById("your_xp").innerHTML = your_level + " xp";
-			document.getElementById("your_level").innerHTML = your_level + ".";
-			document.getElementById("levelup001").style.display = "none";
-			document.getElementById("levelup002").style.display = "none";
-			document.getElementById("levelup003").style.display = "none";
-			document.getElementById("levelup004").style.display = "none";
-			document.getElementById("levelup005").style.display = "none";
-			document.getElementById("levelup006").style.display = "none";
-			document.getElementById("levelup007").style.display = "none";
-			document.getElementById("levelup008").style.display = "none";
-			document.getElementById("levelup009").style.display = "inline-block";
-			document.getElementById("levelup010").style.display = "none";
-		}
-		else{
-			alert('Nincs elég pontod!')
-		}
-	}
-	
-	function levelup009() {
-		if (your_xp >= 37000) {
-			your_level += 1;
-			your_xp -= 37000;
-			document.getElementById("your_xp").innerHTML = your_level + " xp";
-			document.getElementById("your_level").innerHTML = your_level + ".";
-			document.getElementById("levelup001").style.display = "none";
-			document.getElementById("levelup002").style.display = "none";
-			document.getElementById("levelup003").style.display = "none";
-			document.getElementById("levelup004").style.display = "none";
-			document.getElementById("levelup005").style.display = "none";
-			document.getElementById("levelup006").style.display = "none";
-			document.getElementById("levelup007").style.display = "none";
-			document.getElementById("levelup008").style.display = "none";
-			document.getElementById("levelup009").style.display = "none";
-			document.getElementById("levelup010").style.display = "inline-block";
-		}
-		else{
-			alert('Nincs elég pontod!')
-		}
-	}
-	
-	function levelup010() {
-		if (your_xp >= 46000) {
-			your_level += 1;
-			your_xp -= 46000;
-			document.getElementById("your_xp").innerHTML = your_level + " xp";
-			document.getElementById("your_level").innerHTML = "Max.";
-			document.getElementById("levelup001").style.display = "none";
-			document.getElementById("levelup002").style.display = "none";
-			document.getElementById("levelup003").style.display = "none";
-			document.getElementById("levelup004").style.display = "none";
-			document.getElementById("levelup005").style.display = "none";
-			document.getElementById("levelup006").style.display = "none";
-			document.getElementById("levelup007").style.display = "none";
-			document.getElementById("levelup008").style.display = "none";
-			document.getElementById("levelup009").style.display = "none";
-			document.getElementById("levelup010").style.display = "none";
-		}
-		else{
-			alert('Nincs elég pontod!')
-		}
+		
+		document.getElementById("your_xp").innerHTML = your_level + " xp";
+		document.getElementById("your_level").innerHTML = your_level + ".";
 	}
 	
 //----------------------------------BUYING-------------------------------------
