@@ -1,39 +1,168 @@
-html{
-	margin: 0;
-	height: 100%;
-}
-body{
-	margin: 0;
-	height: 100%;
-}
-header{
-	text-align: right;
-	background-color: red;
-}
-.right_side{
-	background-color: yellow;
-	width: 80%;
-	height: 100%;
-	display: inline-block;
-	float: right;
-}
-.left_menu{
-	background-color: orange;
-	width: 20%;
-	height: 100%;
-	display: inline-block;
-	float: left;
-}
-.company{
+/*------------------BASIC---------------*/
 
-}
-.money{
-	padding-right: 20px;
-	padding-left: 20px;	
-}
-.wheat{
-	background-color: brown;
-}
-.shop{
-	display: none;
-}
+	html{
+		margin: 0;
+		height: 100%;
+	}
+	body{
+		margin: 0;
+		height: 100%;
+	}
+	header{
+		text-align: right;
+		background-color: red;
+		height: 7.5%;
+		font-size: 200%;
+	}
+	table{
+	    border: 1px solid black;
+	    border-collapse: collapse;
+	    padding: 5px;
+	    position: relative;
+	}
+	th{
+		border: 1px solid black;
+	    border-collapse: collapse;
+	    padding: 5px;
+	  }
+	td{
+		border: 1px solid black;
+	    border-collapse: collapse;
+	    padding: 5px;
+	    text-align: center;
+	}
+
+/*------------SIDES, IMG, MENU----------*/
+	.right_side{
+		background-color: yellow;
+		width: 80%;
+		min-height: 100%;
+		display: inline-block;
+		float: right;
+	}
+	.left_menu{
+		background-color: orange;
+		width: 20%;
+		min-height: 100%;
+		display: inline-block;
+		float: left;
+		text-align: center;
+		position: relative;
+	}
+	.left-side-button{
+		margin: 5px;
+		min-width: 80%;
+		height: auto;
+		background-color: rgb(255, 255, 134);
+	}
+	.company{
+		padding: 10px;
+	}
+	.img{
+		height: auto;
+		max-width: 100%;
+	}
+	.veg-img{
+		height: 200px;
+		width: 25%;
+	}
+	
+/*-------------------------LEVEL UP------------------*/
+
+	/*----------------------BUTTONS-----------*/
+		.levelup001{
+			display: inline-block;
+		}
+		.levelup002{
+			display: none;
+		}
+		.levelup003{
+			display: none;
+		}
+		.levelup004{
+			display: none;
+		}
+		.levelup005{
+			display: none;
+		}
+		.levelup006{
+			display: none;
+		}
+		.levelup007{
+			display: none;
+		}
+		.levelup008{
+			display: none;
+		}
+		.levelup009{
+			display: none;
+		}
+		.levelup010{
+		display: none;
+		}
+
+	/*------------------LEVEL UP LOGO----------------*/
+
+		.levelup001logo{
+			height: 30px;
+			display: block;
+		}
+		.levelup002logo{
+			height: 30px;
+		}
+		.levelup003logo{
+			height: 30px;
+		}
+		.levelup004logo{
+			height: 30px;
+		}
+		.levelup005logo{
+			height: 30px;
+		}
+		.levelup006logo{
+			height: 30px;
+		}
+		.levelup007logo{
+			height: 30px;
+		}
+		.levelup008logo{
+			height: 30px;
+		}
+		.levelup009logo{
+			height: 30px;
+		}
+		.levelup010logo{
+			height: 30px;
+		}
+
+/*------------------------- .MONEY, .WHEAT ----------*/
+
+	.money{
+		padding-right: 20px;
+		padding-left: 20px;	
+	}
+	.wheat{
+		background-color: brown;
+		margin: 5px;
+		color: rgb(255, 203, 0);
+	}
+
+/*-------------------------PAGES---...---------------*/
+	.shop{
+		display: none;
+	}
+	.field{
+		display: none;
+	}
+	.kitchen{
+		display: none;
+	}
+	.storage{
+		display: none;
+	}
+	.lea{
+		display: none;
+	}
+	.fruity{
+		display: none;
+	}
