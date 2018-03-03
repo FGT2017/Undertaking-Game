@@ -2,19 +2,20 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Top Tap Buisness</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 	<meta charset="utf-16">
+	<title>Game</title>
 </head>
 <body>
 
-<!--_______________________________________LEFT SIDE_______________________________________-->
+<!--_______________________________________SIDEBAR_______________________________________-->
 
 	<div class="left_menu">
 		<img src="logo_ttb.png" class="img"><br>
 		<button onclick="main()" class="left-side-button">Főoldal</button><br>
 		<button onclick="shop()" class="left-side-button">Áruház</button><br>
 		<button onclick="field()" class="left-side-button">Veteményes</button><br>
-		<button onclick="kitchen()" class="left-side-button">Konyha</button><br>
 		<button onclick="storage()" class="left-side-button">Raktár</button><br>
 		<button onclick="lea()" class="left-side-button">Legelő</button><br>
 		<button onclick="fruity()" class="left-side-button">Gyümölcsös</button><br>
@@ -27,16 +28,8 @@
       <span class="level">Szinted: 
           <span id="your_level"></span>
       </span>
-      <button onclick="levelup001()" class="levelup001" id="levelup001"><img src="levelup.ico" class="levelup001logo"></button>
-      <button onclick="levelup002()" class="levelup002" id="levelup002"><img src="levelup.ico" class="levelup002logo"></button>
-      <button onclick="levelup003()" class="levelup003" id="levelup003"><img src="levelup.ico" class="levelup003logo"></button>
-      <button onclick="levelup004()" class="levelup004" id="levelup004"><img src="levelup.ico" class="levelup004logo"></button>
-      <button onclick="levelup005()" class="levelup005" id="levelup005"><img src="levelup.ico" class="levelup005logo"></button>
-      <button onclick="levelup006()" class="levelup006" id="levelup006"><img src="levelup.ico" class="levelup006logo"></button>
-      <button onclick="levelup007()" class="levelup007" id="levelup007"><img src="levelup.ico" class="levelup007logo"></button>
-      <button onclick="levelup008()" class="levelup008" id="levelup008"><img src="levelup.ico" class="levelup008logo"></button>
-      <button onclick="levelup009()" class="levelup009" id="levelup009"><img src="levelup.ico" class="levelup009logo"></button>
-      <button onclick="levelup010()" class="levelup010" id="levelup010"><img src="levelup.ico" class="levelup010logo"></button>
+      <button onclick="levelUp()" class="levelup001" id="levelup001"><img src="levelup.ico" class="levelup001logo"></button>
+
       <span class="xp">Pontjaid: 
           <span id="your_xp"></span>
       </span>
@@ -47,8 +40,19 @@
 		<div class="company">
 			<div id="main" class="main">
 				<div>
-					Főoldal
-				</div>
+					<h1>Hello World!</h1>
+						<p1>We are two web developers from Hungary. The basics of the game was
+							written by Gergő and I am (Zalán) trying to understand him code and make it better.
+								<br/>
+							<strong>Links to us:</strong>
+												
+						</p1>
+								<br/>
+							<i class="fab fa-linkedin"></i>
+							<a href="https://www.linkedin.com/in/zal%C3%A1n-t%C3%B3th-863350158">Zalán's LinkedIn</a>
+								<br/>
+							<i class="fab fa-facebook"></i><a href="https://www.facebook.com">Gergő's facebook</a>
+					</div>
 			</div>
 
 <!--_______________________________________SHOP_______________________________________-->
@@ -260,7 +264,6 @@
 				</table>
 			</div>
 
-<!--_______________________________________END_______________________________________-->
 		</div>
 	</div>
 	<script src="scripts.js"></script>
