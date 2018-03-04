@@ -124,107 +124,424 @@
 		document.getElementById("your_xp").innerHTML = your_xp + " xp";
 		document.getElementById("your_level").innerHTML = your_level + ".";
 	}
-	
-//----------------------------------BUYING-------------------------------------
 
-	function buy_wheat() {
-		if (your_money >= 64) {
-		your_wheat += 1;
-		your_money -= 64;
-		document.getElementById("your_wheat").innerHTML = "Búzád: " + your_wheat;
-		document.getElementById("your_money").innerHTML = "£" + your_money;
-		}
-		else{
-			alert('Nincs elég pénzed')
-		}
+//----------------------------------SHOP----------------------------------------
+	function shopBuy() {
+		document.getElementById("shop_buy").style.display = "block";
+		document.getElementById("shop_sell").style.display = "none";
 	}
-	
-	function buy_rice() {
-		if (your_money >= 51) {
-		your_rice += 1;
-		your_money -= 51;
-		document.getElementById("your_rice").innerHTML = "Rizsed: " + your_rice;
-		document.getElementById("your_money").innerHTML = "£" + your_money;
-		}
-		else{
-			alert('Nincs elég pénzed')
-		}
+	function shopSell() {
+		document.getElementById("shop_sell").style.display = "block";
+		document.getElementById("shop_buy").style.display = "none";
 	}
+	//----------------------------------BUYING-------------------------------------
+
+		function buy_wheat() {
+			if (your_money >= 64) {
+			your_wheat += 1;
+			your_money -= 64;
+			document.getElementById("your_wheat").innerHTML = "Búzád: " + your_wheat;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
 	
-	function buy_corn() {
-		if (your_money >= 93) {
-		your_corn += 1;
-		your_money -= 93;
-		document.getElementById("your_corn").innerHTML = "Kukoricád: " + your_corn;
-		document.getElementById("your_money").innerHTML = "£" + your_money;
+		function buy_rice() {
+			if (your_money >= 51) {
+			your_rice += 1;
+			your_money -= 51;
+			document.getElementById("your_rice").innerHTML = "Rizsed: " + your_rice;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
 		}
-		else{
-			alert('Nincs elég pénzed')
-		}
-	}
 	
-	function buy_carrot() {
-		if (your_money >= 152) {
-		your_carrot += 1;
-		your_money -= 152;
-		document.getElementById("your_carrot").innerHTML = "Répád: " + your_carrot;
-		document.getElementById("your_money").innerHTML = "£" + your_money;
+		function buy_corn() {
+			if (your_money >= 93) {
+			your_corn += 1;
+			your_money -= 93;
+			document.getElementById("your_corn").innerHTML = "Kukoricád: " + your_corn;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
 		}
-		else{
-			alert('Nincs elég pénzed')
-		}
-	}
 	
-//----------------------------------SELLING-------------------------------------
+		function buy_carrot() {
+			if (your_money >= 152) {
+			your_carrot += 1;
+			your_money -= 152;
+			document.getElementById("your_carrot").innerHTML = "Répád: " + your_carrot;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
 	
-	function sell_wheat() {
-		if (your_wheat >= 1) {
-		your_wheat -= 1;
-		your_money += 51;
-		document.getElementById("your_wheat").innerHTML = "Búzád: " + your_wheat;
-		document.getElementById("your_money").innerHTML = "£" + your_money;
+		function buy_pork() {
+			if (your_money >= 152) {
+			your_pork += 1;
+			your_money -= 152;
+			document.getElementById("your_pork").innerHTML = "Sertéshúsod: " + your_pork;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
 		}
-		else{
-			alert('Nincs elég Búzád')
+
+		function buy_fur() {
+			if (your_money >= 13) {
+			your_fur += 1;
+			your_money -= 13;
+			document.getElementById("your_fur").innerHTML = "Szőröd: " + your_fur;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
 		}
-	}
+
+		function buy_leather() {
+			if (your_money >= 43) {
+			your_leather += 1;
+			your_money -= 43;
+			document.getElementById("your_leather").innerHTML = "Bőröd: " + your_leather;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
+
+		function buy_beef() {
+			if (your_money >= 267) {
+			your_beef += 1;
+			your_money -= 267;
+			document.getElementById("your_beef").innerHTML = "Marhahúsod: " + your_beef;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
+
+		function buy_milk() {
+			if (your_money >= 23) {
+			your_milk += 1;
+			your_money -= 23;
+			document.getElementById("your_milk").innerHTML = "Tejed: " + your_milk;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
+
+		function buy_chicken_meat() {
+			if (your_money >= 81) {
+			your_chicken_meat += 1;
+			your_money -= 81;
+			document.getElementById("your_chicken_meat").innerHTML = "Csirkehúsod: " + your_chicken_meat;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
+		function buy_egg() {
+			if (your_money >= 6) {
+			your_egg += 1;
+			your_money -= 6;
+			document.getElementById("your_egg").innerHTML = "Tojásod: " + your_egg;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
+		function buy_feather() {
+			if (your_money >= 9) {
+			your_feather += 1;
+			your_money -= 9;
+			document.getElementById("your_feather").innerHTML = "Tollad: " + your_feather;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
+		function buy_mutton() {
+			if (your_money >= 254) {
+			your_mutton += 1;
+			your_money -= 254;
+			document.getElementById("your_mutton").innerHTML = "Birkahúsod: " + your_mutton;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
+		function buy_wool() {
+			if (your_money >= 25) {
+			your_wool += 1;
+			your_money -= 25;
+			document.getElementById("your_wool").innerHTML = "Gyapjúd: " + your_wool;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
+		function buy_apple() {
+			if (your_money >= 28) {
+			your_apple += 1;
+			your_money -= 28;
+			document.getElementById("your_apple").innerHTML = "Almád: " + your_apple;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
+		function buy_wood() {
+			if (your_money >= 318) {
+			your_wood += 1;
+			your_money -= 318;
+			document.getElementById("your_wood").innerHTML = "Fád: " + your_wood;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
+		function buy_lemon() {
+			if (your_money >= 81) {
+			your_lemon += 1;
+			your_money -= 81;
+			document.getElementById("your_lemon").innerHTML = "Citromod: " + your_lemon;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
+		function buy_walnut() {
+			if (your_money >= 203) {
+			your_walnut += 1;
+			your_money -= 203;
+			document.getElementById("your_walnut").innerHTML = "Szőröd: " + your_walnut;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
+
+	//----------------------------------SELLING-------------------------------------
 	
-	function sell_rice() {
-		if (your_rice >= 1) {
-		your_rice -= 1;
-		your_money += 44;
-		document.getElementById("your_rice").innerHTML = "Rizsed: " + your_rice;
-		document.getElementById("your_money").innerHTML = "£" + your_money;
+		function sell_wheat() {
+			if (your_wheat >= 1) {
+			your_wheat -= 1;
+			your_money += 51;
+			document.getElementById("your_wheat").innerHTML = "Búzád: " + your_wheat;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
 		}
-		else{
-			alert('Nincs elég Rizsed')
-		}
-	}
 	
-	function sell_corn() {
-		if (your_corn >= 1) {
-		your_corn -= 1;
-		your_money += 89;
-		document.getElementById("your_corn").innerHTML = "Kukoricád: " + your_corn;
-		document.getElementById("your_money").innerHTML = "£" + your_money;
+		function sell_rice() {
+			if (your_rice >= 1) {
+			your_rice -= 1;
+			your_money += 44;
+			document.getElementById("your_rice").innerHTML = "Rizsed: " + your_rice;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
 		}
-		else{
-			alert('Nincs elég Kukoricád')
-		}
-	}
 	
-	function sell_carrot() {
-		if (your_carrot >= 1) {
-		your_carrot -= 1;
-		your_money += 127;
-		document.getElementById("your_carrot").innerHTML = "Répád: " + your_carrot;
-		document.getElementById("your_money").innerHTML = "£" + your_money;
+		function sell_corn() {
+			if (your_corn >= 1) {
+			your_corn -= 1;
+			your_money += 89;
+			document.getElementById("your_corn").innerHTML = "Kukoricád: " + your_corn;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
 		}
-		else{
-			alert('Nincs elég Répád')
-		}
-	}
 	
+		function sell_carrot() {
+			if (your_carrot >= 1) {
+			your_carrot -= 1;
+			your_money += 127;
+			document.getElementById("your_carrot").innerHTML = "Répád: " + your_carrot;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
+		}
+		function sell_pork() {
+			if (your_pork >= 1) {
+			your_pork -= 1;
+			your_money += 152;
+			document.getElementById("your_pork").innerHTML = "Sertéshúsod: " + your_pork;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
+		}
+
+		function sell_fur() {
+			if (your_fur >= 1) {
+			your_fur -= 1;
+			your_money += 13;
+			document.getElementById("your_fur").innerHTML = "Szőröd: " + your_fur;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
+		}
+
+		function sell_leather() {
+			if (your_leather >= 1) {
+			your_leather -= 1;
+			your_money += 43;
+			document.getElementById("your_leather").innerHTML = "Bőröd: " + your_leather;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
+		}
+
+		function sell_beef() {
+			if (your_beef >= 1) {
+			your_beef -= 1;
+			your_money += 267;
+			document.getElementById("your_beef").innerHTML = "Marhahúsod: " + your_beef;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
+		}
+
+		function sell_milk() {
+			if (your_milk >= 1) {
+			your_milk -= 1;
+			your_money += 23;
+			document.getElementById("your_milk").innerHTML = "Tejed: " + your_milk;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
+		}
+
+		function sell_chicken_meat() {
+			if (your_chicken_meat >= 1) {
+			your_chicken_meat -= 1;
+			your_money += 81;
+			document.getElementById("your_chicken_meat").innerHTML = "Csirkehúsod: " + your_chicken_meat;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
+		}
+		function sell_egg() {
+			if (your_egg >= 1) {
+			your_egg -= 1;
+			your_money += 6;
+			document.getElementById("your_egg").innerHTML = "Tojásod: " + your_egg;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
+		}
+		function sell_feather() {
+			if (your_feather >= 1) {
+			your_feather -= 1;
+			your_money += 9;
+			document.getElementById("your_feather").innerHTML = "Tollad: " + your_feather;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
+		}
+		function sell_mutton() {
+			if (your_mutton >= 1) {
+			your_mutton -= 1;
+			your_money += 254;
+			document.getElementById("your_mutton").innerHTML = "Birkahúsod: " + your_mutton;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
+		}
+		function sell_wool() {
+			if (your_wool >= 1) {
+			your_wool -= 1;
+			your_money += 21;
+			document.getElementById("your_wool").innerHTML = "Gyapjúd: " + your_wool;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
+		}
+		function sell_apple() {
+			if (your_apple >= 1) {
+			your_apple -= 1;
+			your_money += 28;
+			document.getElementById("your_apple").innerHTML = "Almád: " + your_apple;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
+		}
+		function sell_wood() {
+			if (your_wood >= 1) {
+			your_wood -= 1;
+			your_money += 318;
+			document.getElementById("your_wood").innerHTML = "Fád: " + your_wood;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
+		}
+		function sell_walnut() {
+			if (your_walnut >= 1) {
+			your_walnut -= 1;
+			your_money += 203;
+			document.getElementById("your_walnut").innerHTML = "Szőröd: " + your_walnut;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			}
+			else{
+				alert('Nincs elég Árud!')
+			}
+		}
+
 //----------------------------------GROWING-------------------------------------
 
 	//-1--------------*2--------------
@@ -701,7 +1018,7 @@
 			}
 		}
 
-//---------------------------------FRUITS---------------------------------------
+//----------------------------------FRUITS---------------------------------------
 
 	function apple_tree() {
 		if (your_money >= 127) {
@@ -759,7 +1076,7 @@
 		}
 	}
 
-//---------------------------------PAGES----------------------------------------
+//----------------------------------PAGES----------------------------------------
 
 	function shop() {
 		document.getElementById("shop").style.display = "block";
