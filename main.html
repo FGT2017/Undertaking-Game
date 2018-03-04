@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-	<meta charset="utf-16">
-	<title>Game</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <meta charset="utf-16">
+  <title>Game</title>
 </head>
 <body>
 
 <!--_______________________________________SIDEBAR_______________________________________-->
 
-	<div class="left_menu">
-		<img src="logo_ttb.png" class="img"><br>
-		<button onclick="main()" class="left-side-button">Főoldal</button><br>
-		<button onclick="shop()" class="left-side-button">Áruház</button><br>
-		<button onclick="field()" class="left-side-button">Veteményes</button><br>
-		<button onclick="storage()" class="left-side-button">Raktár</button><br>
-		<button onclick="lea()" class="left-side-button">Legelő</button><br>
-		<button onclick="fruity()" class="left-side-button">Gyümölcsös</button><br>
-	</div>
+  <div class="left_menu">
+    <img src="logo_ttb.png" class="img"><br>
+    <button onclick="main()" class="left-side-button">Főoldal</button><br>
+    <button onclick="shop()" class="left-side-button">Áruház</button><br>
+    <!--<button onclick="kitchen()" class="left-side-button">Konyha</button><br>-->
+    <button onclick="field()" class="left-side-button">Veteményes</button><br>
+    <button onclick="storage()" class="left-side-button">Raktár</button><br>
+    <button onclick="lea()" class="left-side-button">Legelő</button><br>
+    <button onclick="fruity()" class="left-side-button">Gyümölcsös</button><br>
+  </div>
 
 <!--_______________________________________RIGHT SIDE_______________________________________-->
 
-	<div class="right_side">
-		<header>
+  <div class="right_side">
+    <header>
       <span class="level">Szinted: 
           <span id="your_level"></span>
       </span>
@@ -33,239 +34,428 @@
       <span class="xp">Pontjaid: 
           <span id="your_xp"></span>
       </span>
-			<span class="money">Pénzed:
-				<span id="your_money"></span>
-			</span>
-		</header>
-		<div class="company">
-			<div id="main" class="main">
-				<div>
-					<h1>Hello World!</h1>
-						<p1>We are two web developers from Hungary. The basics of the game was
-							written by Gergő and I am (Zalán) trying to understand him code and make it better.
-								<br/>
-							<strong>Links to us:</strong>
-												
-						</p1>
-								<br/>
-							<i class="fab fa-linkedin"></i>
-							<a href="https://www.linkedin.com/in/zal%C3%A1n-t%C3%B3th-863350158">Zalán's LinkedIn</a>
-								<br/>
-							<i class="fab fa-facebook"></i><a href="https://www.facebook.com">Gergő's facebook</a>
-					</div>
-			</div>
+      <span class="money">Pénzed:
+        <span id="your_money"></span>
+      </span>
+    </header>
+    <div class="company">
+      <div id="main" class="main">
+        <div>
+          <h1>Hello World!</h1>
+            <p1>We are two web developers from Hungary. The basics of the game was
+              written by Gergő and I am (Zalán) trying to understand him code and make it better.
+                <br/>
+              <strong>Links to us:</strong>
+                        
+            </p1>
+                <br/>
+              <i class="fab fa-linkedin"></i>
+              <a href="https://www.linkedin.com/in/zal%C3%A1n-t%C3%B3th-863350158">Zalán's LinkedIn</a>
+                <br/>
+              <i class="fab fa-facebook"></i><a href="https://www.facebook.com">Gergő's facebook</a>
+          </div>
+      </div>
 
 <!--_______________________________________SHOP_______________________________________-->
 
-			<div id="shop" class="shop"><br>
-				<div>Áruház</div><br>
-				<div id="buy">
-					<div>Búza
-						<button onclick="buy_wheat()">Vétel: £64/db</button>
-					</div>
-					<div>Rizs
-						<button onclick="buy_rice()">Vétel: £51/db</button>
-					</div>
-					<div>Kukorica
-						<button onclick="buy_corn()">Vétel: £93/db</button>
-					</div>
-					<div>Répa
-						<button onclick="buy_carrot()">Vétel: £152/db</button>
-					</div>
-
-					
-				</div>
-				<br>
-				<div id="sell">
-					<div>Búza
-						<button onclick="sell_wheat()">Eladás: £51/db</button>
-					</div>
-					<div>Rizs
-						<button onclick="sell_rice()">Eladás: £44/db</button>
-					</div>
-					<div>Kukorica
-						<button onclick="sell_corn()">Eladás: £89/db</button>
-					</div>
-					<div>Répa
-						<button onclick="sell_carrot()">Eladás: £127/db</button>
-					</div>
-				</div>
-			</div>
+        <div id="shop" class="shop"><br>
+            <div>Áruház</div><br>
+            <button onclick="shopBuy()">Vásárlás</button>
+            <button onclick="shopSell()">Eladás</button>
+            <br><br>
+            <div class="shop_buy" id="shop_buy">
+              <div class="buy_sell">
+                <table>
+                    <caption>Vétel</caption>
+                    <tr>
+                        <th>Tétel</th>
+                        <th>Ár/db</th>
+                        <th>Vesz</th>
+                    </tr>
+                    <tr>
+                        <td>Búza</td>
+                        <td>£64</td>
+                        <td><button onclick="buy_wheat()">Vesz</button></td>
+                    </tr>
+                    <tr>
+                        <td>Rizs</td>
+                        <td>£51</td>
+                        <td><button onclick="buy_rice()">Vesz</button></td>
+                    </tr>
+                    <tr>
+                        <td>Kukorica</td>
+                        <td>£93</td>
+                        <td><button onclick="buy_corn()">Vesz</button></td>
+                    </tr>
+                    <tr>
+                        <td>Répa</td>
+                        <td>£152</td>
+                        <td><button onclick="buy_carrot()">Vesz</button></td>
+                    </tr>
+                    <tr>
+                        <td>Alma</td>
+                        <td>£28</td>
+                        <td><button onclick="buy_apple()">Vesz</button></td>
+                    </tr>
+                    <tr>
+                        <td>Fa</td>
+                        <td>£318</td>
+                        <td><button onclick="buy_wood()">Vesz</button></td>
+                    </tr>
+                    <tr>
+                        <td>Citrom</td>
+                        <td>£85</td>
+                        <td><button onclick="buy_lemon()">Vesz</button></td>
+                    </tr>
+                    <tr>
+                        <td>Dió</td>
+                        <td>£203</td>
+                        <td><button onclick="buy_walnut()">Vesz</button></td>
+                    </tr>
+                    <tr>
+                        <td>Sertéshús</td>
+                        <td>£152</td>
+                        <td><button onclick="buy_pork()">Vesz</button></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Tétel</th>
+                        <th>Ár/db</th>
+                        <th>Vesz</th>
+                    </tr>
+                    <tr>
+                        <td>Szőr</td>
+                        <td>£13</td>
+                        <td><button onclick="buy_fur()">Vesz</button></td>
+                    </tr>
+                    <tr>
+                        <td>Bőr</td>
+                        <td>£43</td>
+                        <td><button onclick="buy_leather()">Vesz</button></td>
+                    </tr>
+                    <tr>
+                        <td>Marhahús</td>
+                        <td>£267</td>
+                        <td><button onclick="buy_beef()">Vesz</button></td>
+                    </tr>
+                    <tr>
+                        <td>Tej</td>
+                        <td>£23</td>
+                        <td><button onclick="buy_milk()">Vesz</button></td>
+                    </tr>
+                    <tr>
+                        <td>Csirkehús</td>
+                        <td>£81</td>
+                        <td><button onclick="buy_chicken_meat()">Vesz</button></td>
+                    </tr>
+                    <tr>
+                        <td>Tojás</td>
+                        <td>£6</td>
+                        <td><button onclick="buy_egg()">Vesz</button></td>
+                    </tr>
+                    <tr>
+                        <td>Toll</td>
+                        <td>£9</td>
+                        <td><button onclick="buy_feather()">Vesz</button></td>
+                    </tr>
+                    <tr>
+                        <td>Birkahús</td>
+                        <td>£254</td>
+                        <td><button onclick="buy_mutton()">Vesz</button></td>
+                    </tr>
+                    <tr>
+                        <td>Gyapjú</td>
+                        <td>£25</td>
+                        <td><button onclick="buy_wool()">Vesz</button></td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div class="shop_sell" id="shop_sell">
+              <div class="buy_sell">
+                <table>
+                    <caption>Eladás</caption>
+                    <tr>
+                        <th>Tétel</th>
+                        <th>Ár/db</th>
+                        <th>Elad</th>
+                    </tr>
+                    <tr>
+                        <td>Búza</td>
+                        <td>£51</td>
+                        <td><button onclick="sell_wheat()">Elad</button></td>
+                    </tr>
+                    <tr>
+                        <td>Rizs</td>
+                        <td>£44</td>
+                        <td><button onclick="sell_rice()">Elad</button></td>
+                    </tr>
+                    <tr>
+                        <td>Kukorica</td>
+                        <td>£89</td>
+                        <td><button onclick="sell_corn()">Elad</button></td>
+                    </tr>
+                    <tr>
+                        <td>Répa</td>
+                        <td>£127</td>
+                        <td><button onclick="sell_carrot()">Elad</button></td>
+                    </tr>
+                    <tr>
+                        <td>Alma</td>
+                        <td>£27</td>
+                        <td><button onclick="sell_apple()">Elad</button></td>
+                    </tr>
+                    <tr>
+                        <td>Fa</td>
+                        <td>£279</td>
+                        <td><button onclick="sell_wood()">Elad</button></td>
+                    </tr>
+                    <tr>
+                        <td>Citrom</td>
+                        <td>£81</td>
+                        <td><button onclick="sell_lemon()">Elad</button></td>
+                    </tr>
+                    <tr>
+                        <td>Dió</td>
+                        <td>£197</td>
+                        <td><button onclick="sell_walnut()">Elad</button></td>
+                    </tr>
+                    <tr>
+                        <td>Sertéshús</td>
+                        <td>£131</td>
+                        <td><button onclick="sell_pork()">Elad</button></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Tétel</th>
+                        <th>Ár/db</th>
+                        <th>Elad</th>
+                    </tr>
+                    <tr>
+                        <td>Szőr</td>
+                        <td>£5</td>
+                        <td><button onclick="sell_fur()">Elad</button></td>
+                    </tr>
+                    <tr>
+                        <td>Bőr</td>
+                        <td>£42</td>
+                        <td><button onclick="sell_leather()">Elad</button></td>
+                    </tr>
+                    <tr>
+                        <td>Marhahús</td>
+                        <td>£260</td>
+                        <td><button onclick="sell_beef()">Elad</button></td>
+                    </tr>
+                    <tr>
+                        <td>Tej</td>
+                        <td>£22</td>
+                        <td><button onclick="sell_milk()">Elad</button></td>
+                    </tr>
+                    <tr>
+                        <td>Csirkehús</td>
+                        <td>£79</td>
+                        <td><button onclick="sell_chicken_meat()">Elad</button></td>
+                    </tr>
+                    <tr>
+                        <td>Tojás</td>
+                        <td>£6</td>
+                        <td><button onclick="sell_egg()">Elad</button></td>
+                    </tr>
+                    <tr>
+                        <td>Toll</td>
+                        <td>£3</td>
+                        <td><button onclick="sell_feather()">Elad</button></td>
+                    </tr>
+                    <tr>
+                        <td>Birkahús</td>
+                        <td>£216</td>
+                        <td><button onclick="sell_mutton()">Elad</button></td>
+                    </tr>
+                    <tr>
+                        <td>Gyapjú</td>
+                        <td>£21</td>
+                        <td><button onclick="sell_wool()">Elad</button></td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+        </div>
 
 <!--_______________________________________FIELD_______________________________________-->
 
-			<div id="field" class="field"><br>
-				<div>Veteményes</div><br>
-				<table style="width:100%">
-  					<tr>
-    					<th>Búza</th>
-   						<th>Rizs</th> 
-    					<th>Kukorica</th>
-    					<th>Répa</th>
-  					</tr>
-  					<tr>
-   						<td><button onclick="grow_wheat1()">Termeszt: £44/1db</button></td>
-    					<td><button onclick="grow_rice1()">Termeszt: £42/1db</button></td>
-    					<td><button onclick="grow_corn1()">Termeszt: £83/1db</button></td>
-    					<td><button onclick="grow_carrot1()">Termeszt: £124/1db</button></td>
-  					</tr>
-  					<img src="wheat.jpg" class="veg-img">
-  					<tr>
-    					<td><button onclick="grow_wheat2()">Termeszt: £89/2db</button></td>
-    					<td><button onclick="grow_rice2()">Termeszt: £84/2db</button></td>
-    					<td><button onclick="grow_corn2()">Termeszt: £165/2db</button></td>
-    					<td><button onclick="grow_carrot2()">Termeszt: £249/2db</button></td>
-  					</tr>
-  					<img src="rizs-3.jpg" class="veg-img">
-  					<tr>
-    					<td><button onclick="grow_wheat3()">Termeszt: £133/3db</button></td>
-    					<td><button onclick="grow_rice3()">Termeszt: £126/3db</button></td>
-    					<td><button onclick="grow_corn3()">Termeszt: £248/3db</button></td>
-    					<td><button onclick="grow_carrot3()">Termeszt: £373/3db</button></td>
-  					</tr>
-  					<img src="corn.jpg" class="veg-img">
-  					<tr>
-   						<td><button onclick="grow_wheat4()">Termeszt: £178/4db</button></td>
-    					<td><button onclick="grow_rice4()">Termeszt: £168/4db</button></td>
-    					<td><button onclick="grow_corn4()">Termeszt: £330/4db</button></td>
-    					<td><button onclick="grow_carrot4()">Termeszt: £498/4db</button></td>
-  					</tr>
-  					<img src="carrot.jpg" class="veg-img">
-				</table>
-			</div>
+      <div id="field" class="field"><br>
+        <div>Veteményes</div><br>
+        <table style="width:100%">
+            <tr>
+              <th>Búza</th>
+              <th>Rizs</th> 
+              <th>Kukorica</th>
+              <th>Répa</th>
+            </tr>
+            <tr>
+              <td><button onclick="grow_wheat1()">Termeszt: £44/1db</button></td>
+              <td><button onclick="grow_rice1()">Termeszt: £42/1db</button></td>
+              <td><button onclick="grow_corn1()">Termeszt: £83/1db</button></td>
+              <td><button onclick="grow_carrot1()">Termeszt: £124/1db</button></td>
+            </tr>
+            <img src="wheat.jpg" class="veg-img">
+            <tr>
+              <td><button onclick="grow_wheat2()">Termeszt: £89/2db</button></td>
+              <td><button onclick="grow_rice2()">Termeszt: £84/2db</button></td>
+              <td><button onclick="grow_corn2()">Termeszt: £165/2db</button></td>
+              <td><button onclick="grow_carrot2()">Termeszt: £249/2db</button></td>
+            </tr>
+            <img src="rizs-3.jpg" class="veg-img">
+            <tr>
+              <td><button onclick="grow_wheat3()">Termeszt: £133/3db</button></td>
+              <td><button onclick="grow_rice3()">Termeszt: £126/3db</button></td>
+              <td><button onclick="grow_corn3()">Termeszt: £248/3db</button></td>
+              <td><button onclick="grow_carrot3()">Termeszt: £373/3db</button></td>
+            </tr>
+            <img src="corn.jpg" class="veg-img">
+            <tr>
+              <td><button onclick="grow_wheat4()">Termeszt: £178/4db</button></td>
+              <td><button onclick="grow_rice4()">Termeszt: £168/4db</button></td>
+              <td><button onclick="grow_corn4()">Termeszt: £330/4db</button></td>
+              <td><button onclick="grow_carrot4()">Termeszt: £498/4db</button></td>
+            </tr>
+            <img src="carrot.jpg" class="veg-img">
+        </table>
+      </div>
 
 <!--_______________________________________KITCHEN_______________________________________-->
 
-			<div id="kitchen" class="kitchen"><br>
-				<div>Konyha</div><br>
-			</div>
+      <div id="kitchen" class="kitchen"><br>
+        <div>Konyha</div><br>
+      </div>
 
 <!--_______________________________________STORAGE_______________________________________-->
 
-			<div id="storage" class="storage"><br>
-				<div>Raktár</div><br><br>
-				<table style="width:100%">
-  					<tr>
-    					<th>Növények</th>
+      <div id="storage" class="storage"><br>
+        <div>Raktár</div><br><br>
+        <table style="width:100%">
+            <tr>
+              <th>Növények</th>
 
-   						<td><span id="your_wheat" class="wheat"></span></td>
-   						<td><span id="your_rice" class="wheat"></span></td>
-   						<td><span id="your_corn" class="wheat"></span></td>
-   						<td><span id="your_carrot" class="wheat"></span></td>
-  					</tr>
-  					
-  					<tr>
-   						<th>Tejtermékek</th>
+              <td><span id="your_wheat" class="wheat"></span></td>
+              <td><span id="your_rice" class="wheat"></span></td>
+              <td><span id="your_corn" class="wheat"></span></td>
+              <td><span id="your_carrot" class="wheat"></span></td>
+            </tr>
+            
+            <tr>
+              <th>Tejtermékek</th>
 
-    					<td><span id="your_milk" class="wheat"></span></td>
-    					<td><span id="your_cheese" class="wheat"></span></td>
-    					<td><span id="your_butter" class="wheat"></span></td>
-    					<td><span id="your_sourcream" class="wheat"></span></td>
-  					</tr>
-  					<tr>
-   						<th>Energia</th>
-   						
-    					<td><span id="your_water" class="wheat"></span></td>
-   						<td><span id="your_electricity" class="wheat"></span></td>
-   						<td><span id="your_fire" class="wheat"></span></td>
-   						<td><span id="your_yeast" class="wheat"></span></td>
-  					</tr>
-  					<tr>
-   						<th>Egyéb</td>
-   						
-    					<td><span id="your_egg" class="wheat"></span></td>
-   						<td><span id="your_flour" class="wheat"></span></td>
-   						<td><span id="your_oil" class="wheat"></span></td>
-   						<td><span id="your_spice" class="wheat"></span></td>
-  					</tr>
-  					<tr>
-   						<th>Húsok</th>
+              <td><span id="your_milk" class="wheat"></span></td>
+              <td><span id="your_cheese" class="wheat"></span></td>
+              <td><span id="your_butter" class="wheat"></span></td>
+              <td><span id="your_sourcream" class="wheat"></span></td>
+            </tr>
+            <tr>
+              <th>Energia</th>
+              
+              <td><span id="your_water" class="wheat"></span></td>
+              <td><span id="your_electricity" class="wheat"></span></td>
+              <td><span id="your_fire" class="wheat"></span></td>
+              <td><span id="your_yeast" class="wheat"></span></td>
+            </tr>
+            <tr>
+              <th>Egyéb</th>
+              
+              <td><span id="your_egg" class="wheat"></span></td>
+              <td><span id="your_flour" class="wheat"></span></td>
+              <td><span id="your_oil" class="wheat"></span></td>
+              <td><span id="your_spice" class="wheat"></span></td>
+            </tr>
+            <tr>
+              <th>Húsok</th>
 
-    					<td><span id="your_pork" class="wheat"></span></td>
-    					<td><span id="your_beef" class="wheat"></span></td>
-    					<td><span id="your_chicken_meat" class="wheat"></span></td>
-    					<td><span id="your_mutton" class="wheat"></span></td>
-  					</tr>
-  					<tr>
-   						<th>Állatoktól</th>
+              <td><span id="your_pork" class="wheat"></span></td>
+              <td><span id="your_beef" class="wheat"></span></td>
+              <td><span id="your_chicken_meat" class="wheat"></span></td>
+              <td><span id="your_mutton" class="wheat"></span></td>
+            </tr>
+            <tr>
+              <th>Állatoktól</th>
 
-    					<td><span id="your_wool" class="wheat"></span></td>
-    					<td><span id="your_leather" class="wheat"></span></td>
-    					<td><span id="your_feather" class="wheat"></span></td>
-    					<td><span id="your_fur" class="wheat"></span></td>
-  					</tr>
-  					<tr>
-   						<th>Gyümölcs</th>
+              <td><span id="your_wool" class="wheat"></span></td>
+              <td><span id="your_leather" class="wheat"></span></td>
+              <td><span id="your_feather" class="wheat"></span></td>
+              <td><span id="your_fur" class="wheat"></span></td>
+            </tr>
+            <tr>
+              <th>Fáról</th>
 
-    					<td><span id="your_apple" class="wheat"></span></td>
-    					<td><span id="your_wood" class="wheat"></span></td>
-    					<td><span id="your_lemon" class="wheat"></span></td>
-    					<td><span id="your_walnut" class="wheat"></span></td>
-  					</tr>
-				</table>
-			</div>
+              <td><span id="your_apple" class="wheat"></span></td>
+              <td><span id="your_wood" class="wheat"></span></td>
+              <td><span id="your_lemon" class="wheat"></span></td>
+              <td><span id="your_walnut" class="wheat"></span></td>
+            </tr>
+        </table>
+      </div>
 
 <!--_______________________________________LEA_______________________________________-->
 
-			<div id="lea" class="lea"><br>
-				<div>Legelő</div><br><br>
-				<table style="width:100%">
-  					<tr>
-    					<th>Sertés</th>
-   						<th>Marha</th> 
-    					<th>Csirke</th>
-    					<th>Birka</th>
-  					</tr>
-  					<tr>
-   						<td><button onclick="meat_pig()">Hús: £635/5db</button></td>
-    					<td><button onclick="meat_cow()">Hús: £1270/5db</button></td>
-    					<td><button onclick="meat_chicken()">Hús: £381/5db</button></td>
-    					<td><button onclick="meat_sheep()">Hús: £953/5db</button></td>
-  					</tr>
-  					<img src="sertes.jpg" class="veg-img">
-  					<tr>
-    					<td><button onclick="fur_pig()">Szőr: £38/5db</button></td>
-    					<td><button onclick="milk_cow()">Tej: £95/5db</button></td>
-    					<td><button onclick="egg_chicken()">Tojás: £25/5db</button></td>
-    					<td><button onclick="wool_sheep()">Gyapjú: £102/5db</button></td>
-  					</tr>
-  					<img src="marha.jpg" class="veg-img">
-  					<tr>
-    					<td></td>
-    					<td><button onclick="leather_cow()">Bőr: £191/5db</button></td>
-    					<td><button onclick="feather_chicken()">Toll: £32/5db</button></td>
-    					<td></td>
-  					</tr>
-  					<img src="tyuk.jpg" class="veg-img">
-  					<img src="sheep.jpg" class="veg-img">
-				</table>
-			</div>
+      <div id="lea" class="lea"><br>
+        <div>Legelő</div><br><br>
+        <table style="width:100%">
+            <tr>
+              <th>Sertés</th>
+              <th>Marha</th> 
+              <th>Csirke</th>
+              <th>Birka</th>
+            </tr>
+            <tr>
+              <td><button onclick="meat_pig()">Hús: £635/5db</button></td>
+              <td><button onclick="meat_cow()">Hús: £1270/5db</button></td>
+              <td><button onclick="meat_chicken()">Hús: £381/5db</button></td>
+              <td><button onclick="meat_sheep()">Hús: £953/5db</button></td>
+            </tr>
+            <img src="sertes.jpg" class="veg-img">
+            <tr>
+              <td><button onclick="fur_pig()">Szőr: £38/5db</button></td>
+              <td><button onclick="milk_cow()">Tej: £95/5db</button></td>
+              <td><button onclick="egg_chicken()">Tojás: £25/5db</button></td>
+              <td><button onclick="wool_sheep()">Gyapjú: £102/5db</button></td>
+            </tr>
+            <img src="marha.jpg" class="veg-img">
+            <tr>
+              <td></td>
+              <td><button onclick="leather_cow()">Bőr: £191/5db</button></td>
+              <td><button onclick="feather_chicken()">Toll: £32/5db</button></td>
+              <td></td>
+            </tr>
+            <img src="tyuk.jpg" class="veg-img">
+            <img src="sheep.jpg" class="veg-img">
+        </table>
+      </div>
 
 <!--_______________________________________FRUITY_______________________________________-->
-			<div id="fruity" class="fruity"><br>
-				<div>Gyümölcsös</div><br><br>
-				<table style="width:100%">
-  					<tr>
-    					<th>Alma</th>
-   						<th>Tölgyfa</th> 
-    					<th>Citrom</th>
-    					<th>Dió</th>
-  					</tr>
-  					<tr>
-   						<td><button onclick="apple_tree()">Alma: £127/5db</button></td>
-    					<td><button onclick="wood_tree()">Fa: £1270/5db</button></td>
-    					<td><button onclick="lemon_tree()">Citrom: £381/5db</button></td>
-    					<td><button onclick="walnut_tree()">Dió: £953/5db</button></td>
-  					</tr>
-  					<img src="apple.jpg" class="veg-img">
-  					<img src="tolgy.jpg" class="veg-img">
-  					<img src="lemon.jpg" class="veg-img">
-  					<img src="dio.jpg" class="veg-img">
-				</table>
-			</div>
-
-		</div>
-	</div>
-	<script src="scripts.js"></script>
+      <div id="fruity" class="fruity"><br>
+        <div>Gyümölcsös</div><br><br>
+        <table style="width:100%">
+            <tr>
+              <th>Alma</th>
+              <th>Tölgyfa</th> 
+              <th>Citrom</th>
+              <th>Dió</th>
+            </tr>
+            <tr>
+              <td><button onclick="apple_tree()">Alma: £127/5db</button></td>
+              <td><button onclick="wood_tree()">Fa: £1270/5db</button></td>
+              <td><button onclick="lemon_tree()">Citrom: £381/5db</button></td>
+              <td><button onclick="walnut_tree()">Dió: £953/5db</button></td>
+            </tr>
+            <img src="apple.jpg" class="veg-img">
+            <img src="tolgy.jpg" class="veg-img">
+            <img src="lemon.jpg" class="veg-img">
+            <img src="dio.jpg" class="veg-img">
+        </table>
+      </div>
+    </div>
+   </div>
+  <script src="scripts.js"></script>
 </body>
 </html>
