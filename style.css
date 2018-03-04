@@ -14,10 +14,21 @@
 		height: 7.5%;
 		font-size: 200%;
 	}
-
-/*----------------------BUY_SELL-----------------*/
-
 	table{
+		border: 1px solid black;
+	    border-collapse: collapse;
+	    padding: 5px;
+	    position: relative;
+	}
+
+/*---------------------------BUY_SELL-----------------------*/
+	.shop_buy{
+		display: none;
+	}
+	.shop_sell{
+		display: none;
+	}
+	.buy_sell table{
 	    border: 1px solid black;
 	    border-collapse: collapse;
 	    padding: 5px;
@@ -44,6 +55,7 @@
 		border: 5px solid rgb(255, 105, 0);
 	    border-radius: 5px;
 	}
+
 /*----------------------SIDES, IMG, MENU--------------------*/
 	.right_side{
 		background-color: yellow;
@@ -59,7 +71,6 @@
 		display: inline-block;
 		float: left;
 		text-align: center;
-		position: relative;
 	}
 	.left-side-button{
 		margin: 5px;
@@ -92,6 +103,7 @@
 			height: 30px;
 			display: block;
 		}
+
 /*---------------------- .MONEY, .WHEAT --------------------*/
 
 	.money{
