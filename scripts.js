@@ -11,72 +11,34 @@
 //----------------------------------STORAGE-----------------------------------
 
 	//-------------------------INGREDIENTS-----------------------
-
-		var your_wheat = 0;
-		var your_rice = 0;
-		var your_corn = 0;
-		var your_carrot = 0;
-		var your_water = 0;
-		var your_milk = 0;
-		var your_sourcream= 0;
-		var your_egg = 0;
-		var your_flour = 0;
-		var your_butter = 0;
-		var your_oil = 0;
-		var your_cheese = 0;
-		var your_electricity = 0;
-		var your_spice = 0;
-		var your_pork = 0;
-		var your_beef = 0;
-		var your_chicken_meat = 0;
-		var your_mutton = 0;
-		var your_yeast = 0;
-		var your_fire = 0;
-		var your_leather = 0;
-		var your_feather = 0;
-		var your_wool = 0;
-		var your_fur = 0;
-		var your_apple = 0;
-		var your_wood = 0;
-		var your_lemon = 0;
-		var your_walnut = 0;
-	
-	//----------------------------PRINT--------------------------
-
-		document.getElementById("your_wheat").innerHTML = "Búzád: " + your_wheat;
-		document.getElementById("your_rice").innerHTML = "Rizsed: " + your_rice;
-		document.getElementById("your_corn").innerHTML = "Kukoricád: " + your_corn;
-		document.getElementById("your_carrot").innerHTML = "Répád: " + your_carrot;
-		
-		document.getElementById("your_milk").innerHTML = "Tejed: " + your_milk;
-		document.getElementById("your_butter").innerHTML = "Vajad: " + your_butter;
-		document.getElementById("your_cheese").innerHTML = "Sajtod: " + your_cheese;
-		document.getElementById("your_sourcream").innerHTML = "Tejfölöd: " + your_sourcream;
-		
-		document.getElementById("your_water").innerHTML = "Vized: " + your_water;
-		document.getElementById("your_electricity").innerHTML = "Áramod: " + your_electricity;
-		document.getElementById("your_fire").innerHTML = "Tüzed: " + your_fire;
-		document.getElementById("your_yeast").innerHTML = "Élesztőd: " + your_yeast;
-		
-		document.getElementById("your_egg").innerHTML = "Tojásod: " + your_egg;
-		document.getElementById("your_flour").innerHTML = "Liszted: " + your_flour;
-		document.getElementById("your_spice").innerHTML = "Fűszered: " + your_spice;
-		document.getElementById("your_oil").innerHTML = "Olajod: " + your_oil;
-		
-		document.getElementById("your_pork").innerHTML = "Disznóhúsod: " + your_pork;
-		document.getElementById("your_beef").innerHTML = "Marhahúsod: " + your_beef;
-		document.getElementById("your_chicken_meat").innerHTML = "Csirkehúsod: " + your_chicken_meat;
-		document.getElementById("your_mutton").innerHTML = "Birkahúsod: " + your_mutton;
-	
-		document.getElementById("your_wool").innerHTML = "Gyapjúd: " + your_wool;
-		document.getElementById("your_leather").innerHTML = "Bőröd: " + your_leather;
-		document.getElementById("your_feather").innerHTML = "Tollad: " + your_feather;
-		document.getElementById("your_fur").innerHTML = "Szőröd: " + your_fur;
-
-		document.getElementById("your_wood").innerHTML = "Fád: " + your_wood;
-		document.getElementById("your_apple").innerHTML = "Almád: " + your_apple;
-		document.getElementById("your_lemon").innerHTML = "Citromod: " + your_lemon;
-		document.getElementById("your_walnut").innerHTML = "Diód: " + your_walnut;
+			var your_wheat = 0,
+			your_rice = 0,
+			your_corn = 0,
+			your_carrot = 0,
+			your_water = 0,
+			your_milk = 0,
+			your_sourcream= 0,
+			your_egg = 0,
+			your_flour = 0,
+			your_butter = 0,
+			your_oil = 0,
+			your_cheese = 0,
+			your_electricity = 0,
+			your_spice = 0,
+			your_pork = 0,
+			your_beef = 0,
+			your_chicken_meat = 0,
+			your_mutton = 0,
+			your_yeast = 0,
+			your_fire = 0,
+			your_leather = 0,
+			your_feather = 0,
+			your_wool = 0,
+			your_fur = 0,
+			your_apple = 0,
+			your_wood = 0,
+			your_lemon = 0,
+			your_walnut = 0;
 
 //----------------------------------LEVELUP-------------------------------------
 	function levelUp(){
@@ -1077,73 +1039,69 @@
 	}
 
 //----------------------------------PAGES----------------------------------------
-
 	function shop() {
 		document.getElementById("shop").style.display = "block";
-		document.getElementById("main").style.display = "none";
-		document.getElementById("field").style.display = "none";
-		document.getElementById("storage").style.display = "none";
-		document.getElementById("kitchen").style.display = "none";
-		document.getElementById("lea").style.display = "none";
-		document.getElementById("fruity").style.display = "none";
+		hide_Main();
+		hide_Fruity();
+		hide_Field();
+		hide_Storage();
+		hide_Lea();
 	}
-	
 	function main() {
-		document.getElementById("main").style.display = "block";
-		document.getElementById("shop").style.display = "none";
-		document.getElementById("field").style.display = "none";
-		document.getElementById("storage").style.display = "none";
-		document.getElementById("kitchen").style.display = "none";
-		document.getElementById("lea").style.display = "none";
-		document.getElementById("fruity").style.display = "none";
+		document.getElementById("main").style.display = "block";		
+		hide_Fruity();
+		hide_Shop();
+		hide_Field();
+		hide_Storage();
+		hide_Lea();
 	}
-	
 	function field() {
 		document.getElementById("field").style.display = "block";
-		document.getElementById("main").style.display = "none";
-		document.getElementById("shop").style.display = "none";
-		document.getElementById("storage").style.display = "none";
-		document.getElementById("kitchen").style.display = "none";
-		document.getElementById("lea").style.display = "none";
-		document.getElementById("fruity").style.display = "none";
+		hide_Main();
+		hide_Shop();
+		hide_Fruity();
+		hide_Storage();
+		hide_Lea();
 	}
-	
-	function kitchen() {
-		document.getElementById("kitchen").style.display = "block";
-		document.getElementById("main").style.display = "none";
-		document.getElementById("shop").style.display = "none";
-		document.getElementById("field").style.display = "none";
-		document.getElementById("storage").style.display = "none";
-		document.getElementById("lea").style.display = "none";
-		document.getElementById("fruity").style.display = "none";
-	}
-
 	function storage() {
 		document.getElementById("storage").style.display = "block";
-		document.getElementById("main").style.display = "none";
-		document.getElementById("shop").style.display = "none";
-		document.getElementById("field").style.display = "none";
-		document.getElementById("kitchen").style.display = "none";
-		document.getElementById("lea").style.display = "none";
-		document.getElementById("fruity").style.display = "none";
+		hide_Main();
+		hide_Shop();
+		hide_Field();
+		hide_Fruity();
+		hide_Lea();
 	}
-	
 	function lea() {
 		document.getElementById("lea").style.display = "block";
-		document.getElementById("main").style.display = "none";
-		document.getElementById("shop").style.display = "none";
-		document.getElementById("field").style.display = "none";
-		document.getElementById("kitchen").style.display = "none";
-		document.getElementById("storage").style.display = "none";
-		document.getElementById("fruity").style.display = "none";
+		hide_Main();
+		hide_Shop();
+		hide_Field();
+		hide_Storage();
+		hide_Fruity();
 	}
-	
 	function fruity() {
 		document.getElementById("fruity").style.display = "block";
+		hide_Main();
+		hide_Shop();
+		hide_Field();
+		hide_Storage();
+		hide_Lea();
+	}
+	function hide_Main(){
 		document.getElementById("main").style.display = "none";
+	}
+	function hide_Shop(){
 		document.getElementById("shop").style.display = "none";
+	}
+	function hide_Fruity(){
+		document.getElementById("fruity").style.display = "none";
+	}
+	function hide_Field(){
 		document.getElementById("field").style.display = "none";
-		document.getElementById("kitchen").style.display = "none";
+	}
+	function hide_Storage(){
 		document.getElementById("storage").style.display = "none";
+	}
+	function hide_Lea(){
 		document.getElementById("lea").style.display = "none";
 	}
