@@ -507,329 +507,439 @@
 //----------------------------------GROWING-------------------------------------
 
 	//-1--------------*2--------------
-		function grow_wheat1() {
-			if (your_wheat >= 1) {
-				if (your_money >= 44) {
-					your_wheat -= 1;
-					your_money -= 44;
-					your_wheat += 2;
-					your_xp += 9;
-					document.getElementById("your_wheat").innerHTML = "Búzád: " + your_wheat;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
-					document.getElementById("your_xp").innerHTML = your_xp + " xp";
-				}
-				else{
-					alert('Nincs elég pénzed!')
-				}
-			}
-			else{
-				alert('Nincs növényed!')
-			}
+		var can_Grow = true;
+
+		//make grow great again c:
+		function start_Timer_After_Growing(){
+			can_Grow = false;
+			setTimeout(can_grow_Again, 30000);
+		}
+		
+		function can_grow_Again(){
+			can_Grow = true;
+			alert("Már újra tudsz ültetni");
 		}
 
-		function grow_rice1() {
-			if (your_rice >= 1) {
-				if (your_money >= 42) {
-					your_rice -= 1;
-					your_money -= 42;
-					your_rice += 2;
-					your_xp += 8;
-					document.getElementById("your_xp").innerHTML = your_xp + " xp";
-					document.getElementById("your_rice").innerHTML = "Rizsed: " + your_rice;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
+		function grow_wheat1() {
+			if(can_Grow){
+				if (your_wheat >= 1) {
+					if (your_money >= 44) {
+						your_wheat -= 1;
+						your_money -= 44;
+						your_wheat += 2;
+						your_xp += 9;
+						document.getElementById("your_wheat").innerHTML = "Búzád: " + your_wheat;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						document.getElementById("your_xp").innerHTML = your_xp + " xp";		
+						start_Timer_After_Growing();
+					}
+					else{
+						alert('Nincs elég pénzed!')
+					}
 				}
 				else{
-					alert('Nincs elég pénzed!')
+					alert('Nincs növényed!')
 				}
 			}
 			else{
-				alert('Nincs növényed!')
+				alert("Légy türelmes még nem ültethestsz!");
+			}
+	}
+
+		function grow_rice1() {
+			if(can_Grow){
+				if (your_rice >= 1) {
+					if (your_money >= 42) {
+						your_rice -= 1;
+						your_money -= 42;
+						your_rice += 2;
+						your_xp += 8;
+						document.getElementById("your_xp").innerHTML = your_xp + " xp";
+						document.getElementById("your_rice").innerHTML = "Rizsed: " + your_rice;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						start_Timer_After_Growing();
+					}
+					else{
+						alert('Nincs elég pénzed!')
+					}
+				}
+				else{
+					alert('Nincs növényed!')
+				}
+			}
+			else{
+				alert("Légy türelmes még nem ültethestsz!");
 			}
 		}
 
 		function grow_corn1() {
-			if (your_corn >= 1) {
-				if (your_money >= 83) {
-					your_corn -= 1;
-					your_money -= 83;
-					your_corn += 2;
-					your_xp += 17;
-					document.getElementById("your_xp").innerHTML = your_xp + " xp";
-					document.getElementById("your_corn").innerHTML = "Kukoricád: " + your_corn;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
+			if(can_Grow){
+				if (your_corn >= 1) {
+					if (your_money >= 83) {
+						your_corn -= 1;
+						your_money -= 83;
+						your_corn += 2;
+						your_xp += 17;
+						document.getElementById("your_xp").innerHTML = your_xp + " xp";
+						document.getElementById("your_corn").innerHTML = "Kukoricád: " + your_corn;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						start_Timer_After_Growing();
+					}
+					else{
+						alert('Nincs elég pénzed!')
+					}
 				}
 				else{
-					alert('Nincs elég pénzed!')
+					alert('Nincs növényed!')
 				}
 			}
 			else{
-				alert('Nincs növényed!')
+				alert("Légy türelmes még nem ültethestsz!");
 			}
 		}
 
 		function grow_carrot1() {
-			if (your_carrot >= 1) {
-				if (your_money >= 124) {
-					your_carrot -= 1;
-					your_money -= 124;
-					your_carrot += 2;
-					your_xp += 25;
-					document.getElementById("your_xp").innerHTML = your_xp + " xp";
-					document.getElementById("your_carrot").innerHTML = "Répád: " + your_carrot;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
+			if(can_Grow){
+				if (your_carrot >= 1) {
+					if (your_money >= 124) {
+						your_carrot -= 1;
+						your_money -= 124;
+						your_carrot += 2;
+						your_xp += 25;
+						document.getElementById("your_xp").innerHTML = your_xp + " xp";
+						document.getElementById("your_carrot").innerHTML = "Répád: " + your_carrot;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						start_Timer_After_Growing();
+					}
+					else{
+						alert('Nincs elég pénzed!')
+					}
 				}
 				else{
-					alert('Nincs elég pénzed!')
+					alert('Nincs növényed!')
 				}
 			}
 			else{
-				alert('Nincs növényed!')
+				alert("Légy türelmes még nem ültethestsz!");
 			}
 		}
 
 	//-2-------------*3--------------
 	
 		function grow_wheat2() {
-			if (your_wheat >= 1) {
-				if (your_money >= 89) {
-					your_wheat -= 1;
-					your_money -= 89;
-					your_wheat += 3;
-					your_xp += 18;
-					document.getElementById("your_xp").innerHTML = your_xp + " xp";
-					document.getElementById("your_wheat").innerHTML = "Búzád: " + your_wheat;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
+			if(can_Grow){
+				if (your_wheat >= 1) {
+					if (your_money >= 89) {
+						your_wheat -= 1;
+						your_money -= 89;
+						your_wheat += 3;
+						your_xp += 18;
+						document.getElementById("your_xp").innerHTML = your_xp + " xp";
+						document.getElementById("your_wheat").innerHTML = "Búzád: " + your_wheat;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						start_Timer_After_Growing();
+					}
+					else{
+						alert('Nincs elég pénzed!')
+					}
 				}
 				else{
-					alert('Nincs elég pénzed!')
+					alert('Nincs elég növényed!')
+					}
 				}
-			}
 			else{
-				alert('Nincs elég növényed!')
-				}
+				alert("Légy türelmes még nem ültethestsz!");
 			}
+		}
 		
 		function grow_rice2() {
-			if (your_rice >= 1) {
-				if (your_money >= 84) {
-					your_rice -= 1;
-					your_money -= 84;
-					your_rice += 3;
-					your_xp += 17;
-					document.getElementById("your_xp").innerHTML = your_xp + " xp";
-					document.getElementById("your_rice").innerHTML = "Rizsed: " + your_rice;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
+			if(can_Grow){	
+				if (your_rice >= 1) {
+					if (your_money >= 84) {
+						your_rice -= 1;
+						your_money -= 84;
+						your_rice += 3;
+						your_xp += 17;
+						document.getElementById("your_xp").innerHTML = your_xp + " xp";
+						document.getElementById("your_rice").innerHTML = "Rizsed: " + your_rice;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						start_Timer_After_Growing();
+					}
+					else{
+						alert('Nincs elég pénzed!')
+					}
 				}
 				else{
-					alert('Nincs elég pénzed!')
+					alert('Nincs elég növényed!')
 				}
 			}
 			else{
-				alert('Nincs elég növényed!')
+				alert("Légy türelmes még nem ültethestsz!");
 			}
 		}
 		
 		function grow_corn2() {
-			if (your_corn >= 1) {
-				if (your_money >= 165) {
-					your_corn -= 1;
-					your_money -= 165;
-					your_corn += 3;
-					your_xp += 33;
-					document.getElementById("your_xp").innerHTML = your_xp + " xp";
-					document.getElementById("your_corn").innerHTML = "Kukoricád: " + your_corn;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
+			if(can_Grow){	
+				if (your_corn >= 1) {
+					if (your_money >= 165) {
+						your_corn -= 1;
+						your_money -= 165;
+						your_corn += 3;
+						your_xp += 33;
+						document.getElementById("your_xp").innerHTML = your_xp + " xp";
+						document.getElementById("your_corn").innerHTML = "Kukoricád: " + your_corn;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						start_Timer_After_Growing();
+					}
+					else{
+						alert('Nincs elég pénzed!')
+					}
 				}
 				else{
-					alert('Nincs elég pénzed!')
+					alert('Nincs elég növényed!')
 				}
 			}
 			else{
-				alert('Nincs elég növényed!')
+				alert("Légy türelmes még nem ültethestsz!");
 			}
 		}
 		
 		function grow_carrot2() {
-			if (your_carrot >= 1) {
-				if (your_money >= 249) {
-					your_carrot -= 1;
-					your_money -= 249;
-					your_carrot += 3;
-					your_xp += 50;
-					document.getElementById("your_xp").innerHTML = your_xp + " xp";
-					document.getElementById("your_carrot").innerHTML = "Répád: " + your_carrot;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
+			if(can_Grow){	
+				if (your_carrot >= 1) {
+					if (your_money >= 249) {
+						your_carrot -= 1;
+						your_money -= 249;
+						your_carrot += 3;
+						your_xp += 50;
+						document.getElementById("your_xp").innerHTML = your_xp + " xp";
+						document.getElementById("your_carrot").innerHTML = "Répád: " + your_carrot;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						start_Timer_After_Growing();
+					}
+					else{
+						alert('Nincs elég pénzed!')
+					}
 				}
 				else{
-					alert('Nincs elég pénzed!')
+					alert('Nincs elég növényed!')
 				}
 			}
 			else{
-				alert('Nincs elég növényed!')
+				alert("Légy türelmes még nem ültethestsz!");
+
 			}
 		}
 		
 	//-3-------------*4--------------
 		
 		function grow_wheat3() {
-			if (your_wheat >= 1) {
-				if (your_money >= 133) {
-					your_wheat -= 1;
-					your_money -= 133;
-					your_wheat += 4;
-					your_xp += 27;
-					document.getElementById("your_xp").innerHTML = your_xp + " xp";
-					document.getElementById("your_wheat").innerHTML = "Búzád: " + your_wheat;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
+			if(can_Grow){	
+				if (your_wheat >= 1) {
+					if (your_money >= 133) {
+						your_wheat -= 1;
+						your_money -= 133;
+						your_wheat += 4;
+						your_xp += 27;
+						document.getElementById("your_xp").innerHTML = your_xp + " xp";
+						document.getElementById("your_wheat").innerHTML = "Búzád: " + your_wheat;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						start_Timer_After_Growing();
+					}
+					else{
+						alert('Nincs elég pénzed')
+					}
 				}
 				else{
-					alert('Nincs elég pénzed')
+					alert('Nincs növényed!')
 				}
 			}
 			else{
-				alert('Nincs növényed!')
+				alert("Légy türelmes még nem ültethestsz!");
 			}
 		}
 		
 		function grow_rice3() {
-			if (your_rice >= 1) {
-				if (your_money >= 126) {
-					your_rice -= 1;
-					your_money -= 126;
-					your_rice += 4;
-					your_xp += 25;
-					document.getElementById("your_xp").innerHTML = your_xp + " xp";
-					document.getElementById("your_rice").innerHTML = "Rizsed: " + your_rice;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
+			if(can_Grow){	
+				if (your_rice >= 1) {
+					if (your_money >= 126) {
+						your_rice -= 1;
+						your_money -= 126;
+						your_rice += 4;
+						your_xp += 25;
+						document.getElementById("your_xp").innerHTML = your_xp + " xp";
+						document.getElementById("your_rice").innerHTML = "Rizsed: " + your_rice;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						start_Timer_After_Growing();
+					}
+					else{
+						alert('Nincs elég pénzed')
+					}
 				}
 				else{
-					alert('Nincs elég pénzed')
+					alert('Nincs növényed!')
 				}
 			}
 			else{
-				alert('Nincs növényed!')
+				alert("Légy türelmes még nem ültethestsz!");
 			}
 		}
 		
 		function grow_corn3() {
-			if (your_corn >= 1) {
-				if (your_money >= 248) {
-					your_corn -= 1;
-					your_money -= 248;
-					your_corn += 4;
-					your_xp += 50;
-					document.getElementById("your_xp").innerHTML = your_xp + " xp";
-					document.getElementById("your_corn").innerHTML = "Kukoricád: " + your_corn;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
+			if(can_Grow){	
+				if (your_corn >= 1) {
+					if (your_money >= 248) {
+						your_corn -= 1;
+						your_money -= 248;
+						your_corn += 4;
+						your_xp += 50;
+						document.getElementById("your_xp").innerHTML = your_xp + " xp";
+						document.getElementById("your_corn").innerHTML = "Kukoricád: " + your_corn;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						start_Timer_After_Growing();
+					}
+					else{
+						alert('Nincs elég pénzed')
+					}
 				}
 				else{
-					alert('Nincs elég pénzed')
+					alert('Nincs növényed!')
 				}
 			}
 			else{
-				alert('Nincs növényed!')
+				alert("Légy türelmes még nem ültethestsz!");
 			}
 		}
 		
 		function grow_carrot3() {
-			if (your_carrot >= 1) {
-				if (your_money >= 373) {
-					your_carrot -= 1;
-					your_money -= 373;
-					your_carrot += 4;
-					your_xp += 75;
-					document.getElementById("your_xp").innerHTML = your_xp + " xp";
-					document.getElementById("your_carrot").innerHTML = "Répád: " + your_carrot;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
+			if(can_Grow){	
+				if (your_carrot >= 1) {
+					if (your_money >= 373) {
+						your_carrot -= 1;
+						your_money -= 373;
+						your_carrot += 4;
+						your_xp += 75;
+						document.getElementById("your_xp").innerHTML = your_xp + " xp";
+						document.getElementById("your_carrot").innerHTML = "Répád: " + your_carrot;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						start_Timer_After_Growing();
+					}
+					else{
+						alert('Nincs elég pénzed')
+					}
 				}
 				else{
-					alert('Nincs elég pénzed')
+					alert('Nincs növényed!')
 				}
 			}
 			else{
-				alert('Nincs növényed!')
+				alert("Légy türelmes még nem ültethestsz!");
 			}
 		}
 		
 	//-4-------------*5--------------
 		
 		function grow_wheat4() {
-			if (your_wheat >= 1) {
-				if (your_money >= 178) {
-					your_wheat -= 1;
-					your_money -= 178;
-					your_wheat += 5;
-					your_xp += 36;
-					document.getElementById("your_xp").innerHTML = your_xp + " xp";
-					document.getElementById("your_wheat").innerHTML = "Búzád: " + your_wheat;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
+			if(can_Grow){	
+				if (your_wheat >= 1) {
+					if (your_money >= 178) {
+						your_wheat -= 1;
+						your_money -= 178;
+						your_wheat += 5;
+						your_xp += 36;
+						document.getElementById("your_xp").innerHTML = your_xp + " xp";
+						document.getElementById("your_wheat").innerHTML = "Búzád: " + your_wheat;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						start_Timer_After_Growing();
+					}
+					else{
+						alert('Nincs elég pénzed!')
+					}
 				}
 				else{
-					alert('Nincs elég pénzed!')
+					alert('Nincs növényed!')
 				}
 			}
 			else{
-				alert('Nincs növényed!')
+				alert("Légy türelmes még nem ültethestsz!");
 			}
 		}
 		
 		function grow_rice4() {
-			if (your_rice >= 1) {
-				if (your_money >= 168) {
-					your_rice -= 1;
-					your_money -= 168;
-					your_rice += 5;
-					your_xp += 34;
-					document.getElementById("your_xp").innerHTML = your_xp + " xp";
-					document.getElementById("your_rice").innerHTML = "Rizsed: " + your_rice;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
+			if(can_Grow){	
+				if (your_rice >= 1) {
+					if (your_money >= 168) {
+						your_rice -= 1;
+						your_money -= 168;
+						your_rice += 5;
+						your_xp += 34;
+						document.getElementById("your_xp").innerHTML = your_xp + " xp";
+						document.getElementById("your_rice").innerHTML = "Rizsed: " + your_rice;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						start_Timer_After_Growing();
+					}
+					else{
+						alert('Nincs elég pénzed!')
+					}
 				}
 				else{
-					alert('Nincs elég pénzed!')
+					alert('Nincs növényed!')
 				}
 			}
 			else{
-				alert('Nincs növényed!')
+				alert("Légy türelmes még nem ültethestsz!");
 			}
 		}
 		
 		function grow_corn4() {
-			if (your_corn >= 1) {
-				if (your_money >= 330) {
-					your_corn -= 1;
-					your_money -= 330;
-					your_corn += 5;
-					your_xp += 66;
-					document.getElementById("your_xp").innerHTML = your_xp + " xp";
-					document.getElementById("your_corn").innerHTML = "Rizsed: " + your_corn;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
+			if(can_Grow){	
+				if (your_corn >= 1) {
+					if (your_money >= 330) {
+						your_corn -= 1;
+						your_money -= 330;
+						your_corn += 5;
+						your_xp += 66;
+						document.getElementById("your_xp").innerHTML = your_xp + " xp";
+						document.getElementById("your_corn").innerHTML = "Rizsed: " + your_corn;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						start_Timer_After_Growing();
+					}
+					else{
+						alert('Nincs elég pénzed!')
+					}
 				}
 				else{
-					alert('Nincs elég pénzed!')
+					alert('Nincs növényed!')
 				}
 			}
 			else{
-				alert('Nincs növényed!')
+				alert("Légy türelmes még nem ültethestsz!");
 			}
 		}
 		
-				function grow_carrot4() {
-					if (your_carrot >= 1) {
-				if (your_money >= 498) {
-					your_carrot -= 1;
-					your_money -= 498;
-					your_carrot += 5;
-					your_xp += 100;
-					document.getElementById("your_xp").innerHTML = your_xp + " xp";
-					document.getElementById("your_carrot").innerHTML = "Rizsed: " + your_carrot;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
+		function grow_carrot4() {
+			if(can_Grow){	
+				if (your_carrot >= 1) {
+					if (your_money >= 498) {
+						your_carrot -= 1;
+						your_money -= 498;
+						your_carrot += 5;
+						your_xp += 100;
+						document.getElementById("your_xp").innerHTML = your_xp + " xp";
+						document.getElementById("your_carrot").innerHTML = "Rizsed: " + your_carrot;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						start_Timer_After_Growing();
+					}
+					else{
+						alert('Nincs elég pénzed!')
+					}
 				}
 				else{
-					alert('Nincs elég pénzed!')
+					alert('Nincs növényed!')
 				}
 			}
 			else{
-				alert('Nincs növényed!')
+				alert("Légy türelmes még nem ültethestsz!");
 			}
 		}
 
