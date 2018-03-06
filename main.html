@@ -16,11 +16,12 @@
     <img onclick="main()" src="logo_ttb.png" class="img"><br>
     <button onclick="main()" class="left-side-button">Főoldal</button><br>
     <button onclick="shop()" class="left-side-button">Áruház</button><br>
-    <!--<button onclick="kitchen()" class="left-side-button">Konyha</button><br>-->
+    <button onclick="cellar()" class="left-side-button">Pince</button><br>
     <button onclick="field()" class="left-side-button">Veteményes</button><br>
     <button onclick="storage()" class="left-side-button">Raktár</button><br>
     <button onclick="lea()" class="left-side-button">Legelő</button><br>
     <button onclick="fruity()" class="left-side-button">Gyümölcsös</button><br>
+    <button onclick="cookbook()" class="left-side-button">"Szakácskönyv"</button><br>
   </div>
 
 <!--_______________________________________RIGHT SIDE_______________________________________-->
@@ -326,17 +327,57 @@
         </table>
       </div>
 
-<!--_______________________________________KITCHEN_______________________________________-->
+<!--_______________________________________CELLAR_______________________________________-->
 
-      <div id="kitchen" class="kitchen"><br>
-        <div>Konyha</div><br>
-      </div>
+    <div id="cellar" class="cellar"><br>
+        <div>Pince</div><br>
+        <div>
+            <button onclick="makeFood()">Élelmiszerek</button>
+            <button onclick="makeObject()">Tárgyak</button><br><br>
+            <div id="make_food" class="cellar">
+                <div class="making">
+                    <table>
+                        <caption>Ételek</caption>
+                        <tr>
+                            <th>Tétel</th>
+                            <th>Ár/db</th>
+                            <th>Gyárt</th>
+                        </tr>
+                        <tr>
+                            <td>Sajt</td>
+                            <td>£95</td>
+                            <td><button onclick="make_cheese()">Gyárt</button></td>
+                        </tr>
+                        <tr>
+                            <td>Vaj</td>
+                            <td>£33</td>
+                            <td><button onclick="make_butter()">Gyárt</button></td>
+                        </tr>
+                        <tr>
+                            <td>Tejföl</td>
+                            <td>£80</td>
+                            <td><button onclick="make_sourcream()">Gyárt</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="make_object" class="cellar">
+                <table>
+                    <tr>
+                        <th>Izé</th>
+
+                        <td>Sajt</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
 
 <!--_______________________________________STORAGE_______________________________________-->
 
- <div id="storage" class="storage"><br>
-    <div>Raktár</div><br><br>
-    <table style="width:100%">
+    <div id="storage" class="storage"><br>
+      <div>Raktár</div><br><br>
+        <table style="width:100%">
           <tr>
             <th>Növények</th>
 
@@ -363,7 +404,7 @@
                <td><span id="your_yeast" class="wheat">Élesztőd: 0</span></td>
           </tr>
           <tr>
-               <th>Egyéb</td>
+               <th>Egyéb</th>
                
             <td><span id="your_egg" class="wheat">Tojásod: 0</span></td>
                <td><span id="your_flour" class="wheat">Liszted: 0</span></td>
@@ -394,8 +435,8 @@
             <td><span id="your_lemon" class="wheat">Citromod: 0</span></td>
             <td><span id="your_walnut" class="wheat">Diód: 0</span></td>
           </tr>
-    </table>
- </div>
+        </table>
+    </div>
 
 <!--_______________________________________LEA_______________________________________-->
 
@@ -455,8 +496,16 @@
             <img src="dio.jpg" class="veg-img">
         </table>
       </div>
+
+<!--_______________________________________COOKBOOK_____________________________________-->
+
+        <div id="cookbook" class="cookbook"><br>
+            <div>Szakácskönyv</div><br>
+        </div>
+
+<!--__________________________________END/NO DESTRORY IT___________________________-->        
+     </div>
     </div>
-   </div>
   <script src="scripts.js"></script>
 </body>
 </html>
