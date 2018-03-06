@@ -944,149 +944,221 @@
 		}
 
 //----------------------------------ANIMALS-------------------------------------
+		var can_Breed = true;
+
+		//make grow great again c:
+		function start_Timer_After_Breeding(){
+			can_Breed = false;
+			setTimeout(can_breed_Again, 60000);
+		}
+		
+		function can_breed_Again(){
+			can_Breed = true;
+			alert("Már újra tudsz ültetni");
+		}
 
 	//------------------------------MEAT-----------------------------
 		function meat_pig() {
-			if (your_money >= 635) {
-			your_money -= 635;
-			your_pork += 5;
-			your_xp += 127;
-			document.getElementById("your_xp").innerHTML = your_xp + " xp";
-			document.getElementById("your_pork").innerHTML = "Sertéshúsod: " + your_pork;
-			document.getElementById("your_money").innerHTML = "£" + your_money;
+			if (can_Breed) {
+				if (your_money >= 635) {
+				your_money -= 635;
+				your_pork += 5;
+				your_xp += 127;
+				document.getElementById("your_xp").innerHTML = your_xp + " xp";
+				document.getElementById("your_pork").innerHTML = "Sertéshúsod: " + your_pork;
+				document.getElementById("your_money").innerHTML = "£" + your_money;
+				start_Timer_After_Breeding();
+				}
+				else{
+					alert('Nincs elég pénzed')
+				}
 			}
 			else{
-				alert('Nincs elég pénzed')
+				alert("Légy türelmes még nem termelhetsz!");
 			}
 		}
 
 		function meat_cow() {
-			if (your_money >= 1270) {
-			your_money -= 1270;
-			your_beef += 5;
-			your_xp += 254;
-			document.getElementById("your_xp").innerHTML = your_xp + " xp";
-			document.getElementById("your_beef").innerHTML = "Marhahúsod: " + your_beef;
-			document.getElementById("your_money").innerHTML = "£" + your_money;
+			if (can_Breed) {
+				if (your_money >= 1270) {
+				your_money -= 1270;
+				your_beef += 5;
+				your_xp += 254;
+				document.getElementById("your_xp").innerHTML = your_xp + " xp";
+				document.getElementById("your_beef").innerHTML = "Marhahúsod: " + your_beef;
+				document.getElementById("your_money").innerHTML = "£" + your_money;
+				start_Timer_After_Breeding();
+				}
+				else{
+					alert('Nincs elég pénzed')
+				}
 			}
 			else{
-				alert('Nincs elég pénzed')
+				alert("Légy türelmes még nem termelhetsz!");
 			}
 		}
 
 		function meat_chicken() {
-			if (your_money >= 381) {
-			your_money -= 381;
-			your_chicken_meat += 5;
-			your_xp += 76;
-			document.getElementById("your_xp").innerHTML = your_xp + " xp";
-			document.getElementById("your_chicken_meat").innerHTML = "Csirkehúsod: " + your_chicken_meat;
-			document.getElementById("your_money").innerHTML = "£" + your_money;
+			if (can_Breed) {
+				if (your_money >= 381) {
+				your_money -= 381;
+				your_chicken_meat += 5;
+				your_xp += 76;
+				document.getElementById("your_xp").innerHTML = your_xp + " xp";
+				document.getElementById("your_chicken_meat").innerHTML = "Csirkehúsod: " + your_chicken_meat;
+				document.getElementById("your_money").innerHTML = "£" + your_money;
+				start_Timer_After_Breeding();
+				}
+				else{
+					alert('Nincs elég pénzed')
+				}
 			}
 			else{
-				alert('Nincs elég pénzed')
+				alert("Légy türelmes még nem termelhetsz!");
 			}
 		}
 
 		function meat_sheep() {
-			if (your_money >= 953) {
-			your_money -= 953;
-			your_mutton += 5;
-			your_xp += 191;
-			document.getElementById("your_xp").innerHTML = your_xp + " xp";
-			document.getElementById("your_mutton").innerHTML = "Birkahúsod: " + your_mutton;
-			document.getElementById("your_money").innerHTML = "£" + your_money;
+			if (can_Breed) {
+				if (your_money >= 953) {
+				your_money -= 953;
+				your_mutton += 5;
+				your_xp += 191;
+				document.getElementById("your_xp").innerHTML = your_xp + " xp";
+				document.getElementById("your_mutton").innerHTML = "Birkahúsod: " + your_mutton;
+				document.getElementById("your_money").innerHTML = "£" + your_money;
+				start_Timer_After_Breeding();
+				}
+				else{
+					alert('Nincs elég pénzed')
+				}
 			}
 			else{
-				alert('Nincs elég pénzed')
+				alert("Légy türelmes még nem termelhetsz!");
 			}
 		}
 
 	//----------------------MILK, EGG, WOOL, FUR---------------------
 
 		function fur_pig() {
-			if (your_money >= 38) {
-			your_money -= 38;
-			your_fur += 5;
-			your_xp += 8;
-			document.getElementById("your_xp").innerHTML = your_xp + " xp";
-			document.getElementById("your_fur").innerHTML = "Szőröd: " + your_fur;
-			document.getElementById("your_money").innerHTML = "£" + your_money;
+			if (can_Breed) {
+				if (your_money >= 38) {
+				your_money -= 38;
+				your_fur += 5;
+				your_xp += 8;
+				document.getElementById("your_xp").innerHTML = your_xp + " xp";
+				document.getElementById("your_fur").innerHTML = "Szőröd: " + your_fur;
+				document.getElementById("your_money").innerHTML = "£" + your_money;
+				start_Timer_After_Breeding();
+				}
+				else{
+					alert('Nincs elég pénzed')
+				}
 			}
 			else{
-				alert('Nincs elég pénzed')
+				alert("Légy türelmes még nem termelhetsz!");
 			}
 		}
 
 		function milk_cow() {
-			if (your_money >= 95) {
-			your_money -= 95;
-			your_milk += 5;
-			your_xp += 19;
-			document.getElementById("your_xp").innerHTML = your_xp + " xp";
-			document.getElementById("your_milk").innerHTML = "Tejed: " + your_milk;
-			document.getElementById("your_money").innerHTML = "£" + your_money;
+			if (can_Breed) {
+				if (your_money >= 95) {
+				your_money -= 95;
+				your_milk += 5;
+				your_xp += 19;
+				document.getElementById("your_xp").innerHTML = your_xp + " xp";
+				document.getElementById("your_milk").innerHTML = "Tejed: " + your_milk;
+				document.getElementById("your_money").innerHTML = "£" + your_money;
+				start_Timer_After_Breeding();
+				}
+				else{
+					alert('Nincs elég pénzed')
+				}
 			}
 			else{
-				alert('Nincs elég pénzed')
+				alert("Légy türelmes még nem termelhetsz!");
 			}
 		}
 
 		function egg_chicken() {
-			if (your_money >= 25) {
-			your_money -= 25;
-			your_egg += 5;
-			your_xp += 5;
-			document.getElementById("your_xp").innerHTML = your_xp + " xp";
-			document.getElementById("your_egg").innerHTML = "Tojásod: " + your_egg;
-			document.getElementById("your_money").innerHTML = "£" + your_money;
+			if (can_Breed) {
+				if (your_money >= 25) {
+				your_money -= 25;
+				your_egg += 5;
+				your_xp += 5;
+				document.getElementById("your_xp").innerHTML = your_xp + " xp";
+				document.getElementById("your_egg").innerHTML = "Tojásod: " + your_egg;
+				document.getElementById("your_money").innerHTML = "£" + your_money;
+				start_Timer_After_Breeding();
+				}
+				else{
+					alert('Nincs elég pénzed')
+				}
 			}
 			else{
-				alert('Nincs elég pénzed')
+				alert("Légy türelmes még nem termelhetsz!");
 			}
 		}
 
 		function wool_sheep() {
-			if (your_money >= 102) {
-			your_money -= 102;
-			your_wool += 5;
-			your_xp += 20;
-			document.getElementById("your_xp").innerHTML = your_xp + " xp";
-			document.getElementById("your_wool").innerHTML = "Gyapjúd: " + your_wool;
-			document.getElementById("your_money").innerHTML = "£" + your_money;
+			if (can_Breed) {
+				if (your_money >= 102) {
+				your_money -= 102;
+				your_wool += 5;
+				your_xp += 20;
+				document.getElementById("your_xp").innerHTML = your_xp + " xp";
+				document.getElementById("your_wool").innerHTML = "Gyapjúd: " + your_wool;
+				document.getElementById("your_money").innerHTML = "£" + your_money;
+				start_Timer_After_Breeding();
+				}
+				else{
+					alert('Nincs elég pénzed')
+				}
 			}
 			else{
-				alert('Nincs elég pénzed')
+				alert("Légy türelmes még nem termelhetsz!");
 			}
 		}
 
 	//------------------------LEATHER, FEATHER-----------------------
 
 		function leather_cow() {
-			if (your_money >= 191) {
-			your_money -= 191;
-			your_leather += 5;
-			your_xp += 38;
-			document.getElementById("your_xp").innerHTML = your_xp + " xp";
-			document.getElementById("your_leather").innerHTML = "Bőröd: " + your_leather;
-			document.getElementById("your_money").innerHTML = "£" + your_money;
+			if (can_Breed) {
+				if (your_money >= 191) {
+				your_money -= 191;
+				your_leather += 5;
+				your_xp += 38;
+				document.getElementById("your_xp").innerHTML = your_xp + " xp";
+				document.getElementById("your_leather").innerHTML = "Bőröd: " + your_leather;
+				document.getElementById("your_money").innerHTML = "£" + your_money;
+				start_Timer_After_Breeding();
+				}
+				else{
+					alert('Nincs elég pénzed')
+				}
 			}
 			else{
-				alert('Nincs elég pénzed')
+				alert("Légy türelmes még nem termelhetsz!");
 			}
 		}
 
 		function feather_chicken() {
-			if (your_money >= 32) {
-			your_money -= 32;
-			your_feather += 5;
-			your_xp += 6;
-			document.getElementById("your_xp").innerHTML = your_xp + " xp";
-			document.getElementById("your_feather").innerHTML = "Tollad: " + your_feather;
-			document.getElementById("your_money").innerHTML = "£" + your_money;
+			if (can_Breed) {
+				if (your_money >= 32) {
+				your_money -= 32;
+				your_feather += 5;
+				your_xp += 6;
+				document.getElementById("your_xp").innerHTML = your_xp + " xp";
+				document.getElementById("your_feather").innerHTML = "Tollad: " + your_feather;
+				document.getElementById("your_money").innerHTML = "£" + your_money;
+				start_Timer_After_Breeding();
+				}
+				else{
+					alert('Nincs elég pénzed')
+				}
 			}
 			else{
-				alert('Nincs elég pénzed')
+				alert("Légy türelmes még nem termelhetsz!");
 			}
 		}
 
