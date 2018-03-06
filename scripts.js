@@ -504,6 +504,81 @@
 			}
 		}
 
+//----------------------------------CELLAR--------------------------------------
+
+	function makeFood() {
+		document.getElementById("make_food").style.display = "block";
+		document.getElementById("make_object").style.display = "none";
+	}
+	function makeObject() {
+		document.getElementById("make_object").style.display = "block";
+		document.getElementById("make_food").style.display = "none";
+	}
+	//------------------------------MAKING--------------------------------------
+
+		function make_cheese() {
+			if (your_money >= 95) {
+				if (your_milk >= 4) {
+					your_cheese += 1;
+					your_money -= 95;
+					your_milk -= 4;
+					your_xp += 19;
+					document.getElementById("your_cheese").innerHTML = "Sajtod: " + your_cheese;
+					document.getElementById("your_milk").innerHTML = "Tejed: " + your_milk;
+					document.getElementById("your_money").innerHTML = "£" + your_money;
+					document.getElementById("your_xp").innerHTML = your_xp + "xp";
+				}
+				else{
+					alert('Nincs elég tejed!')
+				}
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
+
+		function make_butter() {
+			if (your_money >= 33) {
+				if (your_milk >= 2) {
+					your_butter += 1;
+					your_money -= 33;
+					your_milk -= 2;
+					your_xp += 7;
+					document.getElementById("your_butter").innerHTML = "Vajad: " + your_butter;
+					document.getElementById("your_milk").innerHTML = "Tejed: " + your_milk;
+					document.getElementById("your_money").innerHTML = "£" + your_money;
+					document.getElementById("your_xp").innerHTML = your_xp + "xp";
+				}
+				else{
+					alert('Nincs elég tejed!')
+				}
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
+
+		function make_sourcream() {
+			if (your_money >= 80) {
+				if (your_milk >= 3) {
+					your_sourcream += 1;
+					your_money -= 80;
+					your_milk -= 3;
+					your_xp += 16;
+					document.getElementById("your_sourcream").innerHTML = "Tejfölöd: " + your_sourcream;
+					document.getElementById("your_milk").innerHTML = "Tejed: " + your_milk;
+					document.getElementById("your_money").innerHTML = "£" + your_money;
+					document.getElementById("your_xp").innerHTML = your_xp + "xp";
+				}
+				else{
+					alert('Nincs elég tejed!')
+				}
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
+		}
+
 //----------------------------------GROWING-------------------------------------
 
 	//-1--------------*2--------------
@@ -1365,6 +1440,8 @@
 		hide_Field();
 		hide_Storage();
 		hide_Lea();
+		hide_Cellar();
+		hide_CookBook();
 	}
 	function main() {
 		document.getElementById("main").style.display = "block";		
@@ -1373,6 +1450,8 @@
 		hide_Field();
 		hide_Storage();
 		hide_Lea();
+		hide_Cellar();
+		hide_CookBook();
 	}
 	function field() {
 		document.getElementById("field").style.display = "block";
@@ -1381,6 +1460,8 @@
 		hide_Fruity();
 		hide_Storage();
 		hide_Lea();
+		hide_Cellar();
+		hide_CookBook();
 	}
 	function storage() {
 		document.getElementById("storage").style.display = "block";
@@ -1389,6 +1470,8 @@
 		hide_Field();
 		hide_Fruity();
 		hide_Lea();
+		hide_Cellar();
+		hide_CookBook();
 	}
 	function lea() {
 		document.getElementById("lea").style.display = "block";
@@ -1397,6 +1480,8 @@
 		hide_Field();
 		hide_Storage();
 		hide_Fruity();
+		hide_Cellar();
+		hide_CookBook();
 	}
 	function fruity() {
 		document.getElementById("fruity").style.display = "block";
@@ -1405,6 +1490,27 @@
 		hide_Field();
 		hide_Storage();
 		hide_Lea();
+		hide_Cellar();
+		hide_CookBook();
+	}
+	function cellar() {
+		document.getElementById("cellar").style.display = "block";
+		hide_Main();
+		hide_Shop();
+		hide_Field();
+		hide_Storage();
+		hide_Lea();
+		hide_Fruity();
+		hide_CookBook();
+	}
+	function cookbook() {
+		document.getElementById("cookbook").style.display = "block";
+		hide_Main();
+		hide_Shop();
+		hide_Field();
+		hide_Storage();
+		hide_Lea();
+		hide_Fruity();
 	}
 	function hide_Main(){
 		document.getElementById("main").style.display = "none";
@@ -1423,4 +1529,11 @@
 	}
 	function hide_Lea(){
 		document.getElementById("lea").style.display = "none";
+	}
+	function hide_Cellar(){
+		document.getElementById("cellar").style.display = "none";
+	}
+
+	function hide_CookBook(){
+		document.getElementById("cookbook").style.display = "none";
 	}
