@@ -56,6 +56,25 @@
 	    border-radius: 5px;
 	}
 
+/*----------------------------CELLAR------------------------*/
+	
+	.cellar table{
+	    border: 1px solid black;
+	    border-collapse: collapse;
+	    padding: 5px;
+	    position: relative;
+	    display: inline-table;
+	    border-left: 2px solid rgb(255, 105, 0);
+	    border-bottom: 2px solid rgb(255, 105, 0);
+	    border-right:2px solid rgb(255, 105, 0);
+	    border-top: 2.8px solid black;
+	}
+	.making{
+		display: inline-table;
+		border: 5px solid rgb(255, 105, 0);
+	    border-radius: 5px;
+	}
+
 /*----------------------SIDES, IMG, MENU--------------------*/
 	.right_side{
 		background-color: #ffe451;
@@ -133,5 +152,11 @@
 		display: none;
 	}
 	.fruity{
+		display: none;
+	}
+	.cellar{
+		display: none;
+	}
+	.cookbook{
 		display: none;
 	}
