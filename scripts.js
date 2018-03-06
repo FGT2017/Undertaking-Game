@@ -944,22 +944,70 @@
 		}
 
 //----------------------------------ANIMALS-------------------------------------
-		var can_Breed = true;
+
+	var can_Breed_pig = true;
 
 		//make grow great again c:
-		function start_Timer_After_Breeding(){
-			can_Breed = false;
-			setTimeout(can_breed_Again, 60000);
-		}
-		
-		function can_breed_Again(){
-			can_Breed = true;
-			alert("Már újra tudsz ültetni");
-		}
+
+	function start_Timer_After_Pig_Breeding(){
+		alert("Elkezdtél disznót tenyészteni!");
+		can_Breed_pig = false;
+		setTimeout(can_breed_pig_Again, 60000);
+	}
+	
+	function can_breed_pig_Again(){
+		can_Breed_pig = true;
+		alert("Már újra tudsz sertést tenyészteni!");
+	}
+	//---------------------------------
+	var can_Breed_cow = true;
+
+		//make grow great again c:
+
+	function start_Timer_After_Cow_Breeding(){
+		alert("Elkezdtél marhát tenyészteni!");
+		can_Breed_cow = false;
+		setTimeout(can_breed_cow_Again, 60000);
+	}
+	
+	function can_breed_cow_Again(){
+		can_Breed_cow = true;
+		alert("Már újra tudsz marhát tenyészteni!");
+	}
+
+	//----------------------
+	var can_Breed_chicken = true;
+		//make grow great again c:
+	function start_Timer_After_Chicken_Breeding(){
+		alert("Elkezdtél csirkét tenyészteni!");
+		can_Breed_chicken = false;
+		setTimeout(can_breed_chicken_Again, 60000);
+	}
+	
+	function can_breed_chicken_Again(){
+		can_Breed_chicken = true;
+		alert("Már újra tudsz csirkét tenyészteni!");
+	}
+
+	//----------------------
+	var can_Breed_sheep = true;
+
+		//make grow great again c:
+	function start_Timer_After_Sheep_Breeding(){
+		alert("Elkezdtél birkát tenyészteni!");
+		can_Breed_sheep = false;
+		setTimeout(can_breed_sheep_Again, 60000);
+	}
+	
+	function can_breed_sheep_Again(){
+		can_Breed_sheep = true;
+		alert("Már újra tudsz birkát tenyészteni!");
+	}
 
 	//------------------------------MEAT-----------------------------
+
 		function meat_pig() {
-			if (can_Breed) {
+			if (can_Breed_pig) {
 				if (your_money >= 635) {
 				your_money -= 635;
 				your_pork += 5;
@@ -967,7 +1015,7 @@
 				document.getElementById("your_xp").innerHTML = your_xp + " xp";
 				document.getElementById("your_pork").innerHTML = "Sertéshúsod: " + your_pork;
 				document.getElementById("your_money").innerHTML = "£" + your_money;
-				start_Timer_After_Breeding();
+				start_Timer_After_Pig_Breeding();
 				}
 				else{
 					alert('Nincs elég pénzed')
@@ -979,7 +1027,7 @@
 		}
 
 		function meat_cow() {
-			if (can_Breed) {
+			if (can_Breed_cow) {
 				if (your_money >= 1270) {
 				your_money -= 1270;
 				your_beef += 5;
@@ -987,7 +1035,7 @@
 				document.getElementById("your_xp").innerHTML = your_xp + " xp";
 				document.getElementById("your_beef").innerHTML = "Marhahúsod: " + your_beef;
 				document.getElementById("your_money").innerHTML = "£" + your_money;
-				start_Timer_After_Breeding();
+				start_Timer_After_Cow_Breeding();
 				}
 				else{
 					alert('Nincs elég pénzed')
@@ -999,7 +1047,7 @@
 		}
 
 		function meat_chicken() {
-			if (can_Breed) {
+			if (can_Breed_chicken) {
 				if (your_money >= 381) {
 				your_money -= 381;
 				your_chicken_meat += 5;
@@ -1007,7 +1055,7 @@
 				document.getElementById("your_xp").innerHTML = your_xp + " xp";
 				document.getElementById("your_chicken_meat").innerHTML = "Csirkehúsod: " + your_chicken_meat;
 				document.getElementById("your_money").innerHTML = "£" + your_money;
-				start_Timer_After_Breeding();
+				start_Timer_After_Chicken_Breeding();
 				}
 				else{
 					alert('Nincs elég pénzed')
@@ -1019,7 +1067,7 @@
 		}
 
 		function meat_sheep() {
-			if (can_Breed) {
+			if (can_Breed_sheep) {
 				if (your_money >= 953) {
 				your_money -= 953;
 				your_mutton += 5;
@@ -1027,7 +1075,7 @@
 				document.getElementById("your_xp").innerHTML = your_xp + " xp";
 				document.getElementById("your_mutton").innerHTML = "Birkahúsod: " + your_mutton;
 				document.getElementById("your_money").innerHTML = "£" + your_money;
-				start_Timer_After_Breeding();
+				start_Timer_After_Sheep_Breeding();
 				}
 				else{
 					alert('Nincs elég pénzed')
@@ -1041,7 +1089,7 @@
 	//----------------------MILK, EGG, WOOL, FUR---------------------
 
 		function fur_pig() {
-			if (can_Breed) {
+			if (can_Breed_pig) {
 				if (your_money >= 38) {
 				your_money -= 38;
 				your_fur += 5;
@@ -1049,7 +1097,7 @@
 				document.getElementById("your_xp").innerHTML = your_xp + " xp";
 				document.getElementById("your_fur").innerHTML = "Szőröd: " + your_fur;
 				document.getElementById("your_money").innerHTML = "£" + your_money;
-				start_Timer_After_Breeding();
+				start_Timer_After_Pig_Breeding();
 				}
 				else{
 					alert('Nincs elég pénzed')
@@ -1061,7 +1109,7 @@
 		}
 
 		function milk_cow() {
-			if (can_Breed) {
+			if (can_Breed_cow) {
 				if (your_money >= 95) {
 				your_money -= 95;
 				your_milk += 5;
@@ -1069,7 +1117,7 @@
 				document.getElementById("your_xp").innerHTML = your_xp + " xp";
 				document.getElementById("your_milk").innerHTML = "Tejed: " + your_milk;
 				document.getElementById("your_money").innerHTML = "£" + your_money;
-				start_Timer_After_Breeding();
+				start_Timer_After_Cow_Breeding();
 				}
 				else{
 					alert('Nincs elég pénzed')
@@ -1081,7 +1129,7 @@
 		}
 
 		function egg_chicken() {
-			if (can_Breed) {
+			if (can_Breed_chicken) {
 				if (your_money >= 25) {
 				your_money -= 25;
 				your_egg += 5;
@@ -1089,7 +1137,7 @@
 				document.getElementById("your_xp").innerHTML = your_xp + " xp";
 				document.getElementById("your_egg").innerHTML = "Tojásod: " + your_egg;
 				document.getElementById("your_money").innerHTML = "£" + your_money;
-				start_Timer_After_Breeding();
+				start_Timer_After_Chicken_Breeding();
 				}
 				else{
 					alert('Nincs elég pénzed')
@@ -1101,7 +1149,7 @@
 		}
 
 		function wool_sheep() {
-			if (can_Breed) {
+			if (can_Breed_sheep) {
 				if (your_money >= 102) {
 				your_money -= 102;
 				your_wool += 5;
@@ -1109,7 +1157,7 @@
 				document.getElementById("your_xp").innerHTML = your_xp + " xp";
 				document.getElementById("your_wool").innerHTML = "Gyapjúd: " + your_wool;
 				document.getElementById("your_money").innerHTML = "£" + your_money;
-				start_Timer_After_Breeding();
+				start_Timer_After_Sheep_Breeding();
 				}
 				else{
 					alert('Nincs elég pénzed')
@@ -1123,7 +1171,7 @@
 	//------------------------LEATHER, FEATHER-----------------------
 
 		function leather_cow() {
-			if (can_Breed) {
+			if (can_Breed_cow) {
 				if (your_money >= 191) {
 				your_money -= 191;
 				your_leather += 5;
@@ -1131,7 +1179,7 @@
 				document.getElementById("your_xp").innerHTML = your_xp + " xp";
 				document.getElementById("your_leather").innerHTML = "Bőröd: " + your_leather;
 				document.getElementById("your_money").innerHTML = "£" + your_money;
-				start_Timer_After_Breeding();
+				start_Timer_After_Cow_Breeding();
 				}
 				else{
 					alert('Nincs elég pénzed')
@@ -1143,7 +1191,7 @@
 		}
 
 		function feather_chicken() {
-			if (can_Breed) {
+			if (can_Breed_chicken) {
 				if (your_money >= 32) {
 				your_money -= 32;
 				your_feather += 5;
@@ -1151,7 +1199,7 @@
 				document.getElementById("your_xp").innerHTML = your_xp + " xp";
 				document.getElementById("your_feather").innerHTML = "Tollad: " + your_feather;
 				document.getElementById("your_money").innerHTML = "£" + your_money;
-				start_Timer_After_Breeding();
+				start_Timer_After_Chicken_Breeding();
 				}
 				else{
 					alert('Nincs elég pénzed')
@@ -1163,60 +1211,149 @@
 		}
 
 //----------------------------------FRUITS---------------------------------------
+	
+	var can_Grow_apple = true;
+
+		//make grow great again c:
+
+	function start_Timer_After_Apple_Growing(){
+		alert("Elkezdtél almát termeszteni!");
+		can_Grow_apple = false;
+		setTimeout(can_grow_apple_Again, 120000);
+	}
+	
+	function can_grow_apple_Again(){
+		can_Grow_apple = true;
+		alert("Már újra tudsz almát termeszteni!");
+	}
+
+	//---------------------------------
+	var can_Grow_wood = true;
+
+		//make grow great again c:
+
+	function start_Timer_After_Wood_Growing(){
+		alert("Elkezdtél fát termeszteni!");
+		can_Grow_wood = false;
+		setTimeout(can_grow_wood_Again, 120000);
+	}
+	
+	function can_grow_wood_Again(){
+		can_Grow_wood = true;
+		alert("Már újra tudsz fát termeszteni!");
+	}
+
+	//----------------------
+	var can_Grow_lemon = true;
+
+		//make grow great again c:
+
+	function start_Timer_After_Lemon_Growing(){
+		alert("Elkezdtél citromot termeszteni!");
+		can_Grow_lemon = false;
+		setTimeout(can_grow_lemon_Again, 120000);
+	}
+	
+	function can_grow_lemon_Again(){
+		can_Grow_lemon = true;
+		alert("Már újra tudsz citromot termeszteni!");
+	}
+
+	//----------------------
+	var can_Grow_walnut = true;
+
+		//make grow great again c:
+
+	function start_Timer_After_Walnut_Growing(){
+		alert("Elkezdtél diót termeszteni!");
+		can_Grow_walnut = false;
+		setTimeout(can_grow_wood_Again, 120000);
+	}
+	
+	function can_grow_walnut_Again(){
+		can_Grow_walnut = true;
+		alert("Már újra tudsz diót termeszteni!");
+	}
+
+	//---------------------------------------------------------------------------------------
 
 	function apple_tree() {
-		if (your_money >= 127) {
-		your_money -= 127;
-		your_apple += 5;
-		your_xp += 25;
-		document.getElementById("your_xp").innerHTML = your_xp + " xp";
-		document.getElementById("your_apple").innerHTML = "Almád: " + your_apple;
-		document.getElementById("your_money").innerHTML = "£" + your_money;
+		if (can_Grow_apple) {
+			if (your_money >= 127) {
+			your_money -= 127;
+			your_apple += 5;
+			your_xp += 25;
+			document.getElementById("your_xp").innerHTML = your_xp + " xp";
+			document.getElementById("your_apple").innerHTML = "Almád: " + your_apple;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			start_Timer_After_Apple_Growing();
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
 		}
 		else{
-			alert('Nincs elég pénzed')
+			alert("Légy türelmes még nem termeszthetsz!");
 		}
 	}
 
 	function wood_tree() {
-		if (your_money >= 1270) {
-		your_money -= 1270;
-		your_wood += 5;
-		your_xp += 254;
-		document.getElementById("your_xp").innerHTML = your_xp + " xp";
-		document.getElementById("your_wood").innerHTML = "Fád: " + your_wood;
-		document.getElementById("your_money").innerHTML = "£" + your_money;
+		if (can_Grow_wood) {
+			if (your_money >= 1270) {
+			your_money -= 1270;
+			your_wood += 5;
+			your_xp += 254;
+			document.getElementById("your_xp").innerHTML = your_xp + " xp";
+			document.getElementById("your_wood").innerHTML = "Fád: " + your_wood;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			start_Timer_After_Wood_Growing();
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
 		}
 		else{
-			alert('Nincs elég pénzed')
+			alert("Légy türelmes még nem termeszthetsz!");
 		}
 	}
 
 	function lemon_tree() {
-		if (your_money >= 381) {
-		your_money -= 381;
-		your_lemon += 5;
-		your_xp += 76;
-		document.getElementById("your_xp").innerHTML = your_xp + " xp";
-		document.getElementById("your_lemon").innerHTML = "Citromod: " + your_lemon;
-		document.getElementById("your_money").innerHTML = "£" + your_money;
+		if (can_Grow_lemon) {
+			if (your_money >= 381) {
+			your_money -= 381;
+			your_lemon += 5;
+			your_xp += 76;
+			document.getElementById("your_xp").innerHTML = your_xp + " xp";
+			document.getElementById("your_lemon").innerHTML = "Citromod: " + your_lemon;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			start_Timer_After_Lemon_Growing();
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
 		}
 		else{
-			alert('Nincs elég pénzed')
+			alert("Légy türelmes még nem termeszthetsz!");
 		}
 	}
 
 	function walnut_tree() {
-		if (your_money >= 953) {
-		your_money -= 953;
-		your_walnut += 5;
-		your_xp += 191;
-		document.getElementById("your_xp").innerHTML = your_xp + " xp";
-		document.getElementById("your_walnut").innerHTML = "Almád: " + your_walnut;
-		document.getElementById("your_money").innerHTML = "£" + your_money;
+		if (can_Grow_walnut) {
+			if (your_money >= 953) {
+			your_money -= 953;
+			your_walnut += 5;
+			your_xp += 191;
+			document.getElementById("your_xp").innerHTML = your_xp + " xp";
+			document.getElementById("your_walnut").innerHTML = "Diód: " + your_walnut;
+			document.getElementById("your_money").innerHTML = "£" + your_money;
+			start_Timer_After_Walnut_Growing();
+			}
+			else{
+				alert('Nincs elég pénzed')
+			}
 		}
 		else{
-			alert('Nincs elég pénzed')
+			alert("Légy türelmes még nem termeszthetsz!");
 		}
 	}
 
