@@ -20,6 +20,19 @@
 	    padding: 5px;
 	    position: relative;
 	}
+/*---------------------------STORAGE------------------------*/
+	.storage th{
+		border-right: 3px solid black;
+	}
+	.storage table{
+		border: 5px solid black;
+	}
+	.last_ingredient{
+		border-bottom: 5px double black;
+	}
+	.last_food{
+		border-bottom: 2px solid black;
+	}
 
 /*---------------------------BUY_SELL-----------------------*/
 	.shop_buy{
