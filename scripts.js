@@ -23,7 +23,7 @@
 			your_butter = 0,
 			your_oil = 0,
 			your_cheese = 0,
-			your_electricity = 0,
+			your_metal = 0,
 			your_spice = 0,
 			your_pork = 0,
 			your_beef = 0,
@@ -39,6 +39,30 @@
 			your_wood = 0,
 			your_lemon = 0,
 			your_walnut = 0;
+			your_sausage = 0;
+			your_hurka = 0;
+			your_bread = 0;
+			your_cornflout = 0;
+			your_hominy = 0;
+			your_rice_pudding = 0;
+			your_scrambled_egg = 0;
+			your_brush = 0;
+			your_quill = 0;
+			your_hat = 0;
+			your_coat = 0;
+			your_shoes = 0;
+			your_flask = 0;
+			your_saddle = 0;
+			your_whip = 0;
+			your_sponge_cake = 0;
+			your_lemon_cake = 0;
+			your_lemon_cream = 0;
+			your_fried_pork = 0;
+			your_fried_beef = 0;
+			your_fried_chicken = 0;
+			your_fried_mutton = 0;
+			your_chesse_scone = 0;
+			your_sourcream_scone = 0;
 
 //----------------------------------LEVELUP-------------------------------------
 	function levelUp(){
@@ -514,70 +538,221 @@
 		document.getElementById("make_object").style.display = "block";
 		document.getElementById("make_food").style.display = "none";
 	}
-	//------------------------------MAKING--------------------------------------
+	//------------------------------MAKING_FOOD--------------------------------------
 
 		function make_cheese() {
-			if (your_money >= 95) {
-				if (your_milk >= 4) {
-					your_cheese += 1;
-					your_money -= 95;
-					your_milk -= 4;
-					your_xp += 19;
-					document.getElementById("your_cheese").innerHTML = "Sajtod: " + your_cheese;
-					document.getElementById("your_milk").innerHTML = "Tejed: " + your_milk;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
-					document.getElementById("your_xp").innerHTML = your_xp + "xp";
+			if (your_money >= 13) {
+				if (your_fire >= 1) {
+					if (your_milk >= 4) {
+						your_cheese += 1;
+						your_money -= 13;
+						your_milk -= 4;
+						your_fire -= 1;
+						your_xp += 19;
+						document.getElementById("your_cheese").innerHTML = "Sajtod: " + your_cheese;
+						document.getElementById("your_fire").innerHTML = "Tüzed: " + your_fire;
+						document.getElementById("your_milk").innerHTML = "Tejed: " + your_milk;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						document.getElementById("your_xp").innerHTML = your_xp + "xp";
+					}
+					else{
+						alert('Nincs elég tejed!')
+					}
 				}
 				else{
-					alert('Nincs elég tejed!')
+					alert("Nincs elég tüzed!")
 				}
 			}
 			else{
-				alert('Nincs elég pénzed')
+				alert('Nincs elég pénzed!')
 			}
 		}
 
 		function make_butter() {
-			if (your_money >= 33) {
-				if (your_milk >= 2) {
-					your_butter += 1;
-					your_money -= 33;
-					your_milk -= 2;
-					your_xp += 7;
-					document.getElementById("your_butter").innerHTML = "Vajad: " + your_butter;
-					document.getElementById("your_milk").innerHTML = "Tejed: " + your_milk;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
-					document.getElementById("your_xp").innerHTML = your_xp + "xp";
+			if (your_money >= 13) {
+				if (your_fire >= 1) {
+					if (your_milk >= 2) {
+						your_butter += 1;
+						your_money -= 13;
+						your_milk -= 2;
+						your_fire -= 1;
+						your_xp += 7;
+						document.getElementById("your_butter").innerHTML = "Vajad: " + your_butter;
+						document.getElementById("your_fire").innerHTML = "Tüzed: " + your_fire;
+						document.getElementById("your_milk").innerHTML = "Tejed: " + your_milk;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						document.getElementById("your_xp").innerHTML = your_xp + "xp";
+					}
+					else{
+						alert('Nincs elég tejed!')
+					}
 				}
 				else{
-					alert('Nincs elég tejed!')
-				}
+					alert("Nincs elég tüzed!")
+				}	
 			}
 			else{
-				alert('Nincs elég pénzed')
+				alert('Nincs elég pénzed!')
 			}
 		}
 
 		function make_sourcream() {
-			if (your_money >= 80) {
-				if (your_milk >= 3) {
-					your_sourcream += 1;
-					your_money -= 80;
-					your_milk -= 3;
-					your_xp += 16;
-					document.getElementById("your_sourcream").innerHTML = "Tejfölöd: " + your_sourcream;
-					document.getElementById("your_milk").innerHTML = "Tejed: " + your_milk;
-					document.getElementById("your_money").innerHTML = "£" + your_money;
-					document.getElementById("your_xp").innerHTML = your_xp + "xp";
+			if (your_money >= 13) {
+				if (your_fire >= 1) {
+					if (your_milk >= 3) {
+						your_sourcream += 1;
+						your_money -= 13;
+						your_milk -= 3;
+						your_fire -= 1;
+						your_xp += 16;
+						document.getElementById("your_sourcream").innerHTML = "Tejfölöd: " + your_sourcream;
+						document.getElementById("your_fire").innerHTML = "Tüzed: " + your_fire;
+						document.getElementById("your_milk").innerHTML = "Tejed: " + your_milk;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						document.getElementById("your_xp").innerHTML = your_xp + "xp";
+					}
+					else{
+						alert('Nincs elég tejed!')
+					}
 				}
 				else{
-					alert('Nincs elég tejed!')
+					alert("Nincs elég tüzed!")
 				}
 			}
 			else{
-				alert('Nincs elég pénzed')
+				alert('Nincs elég pénzed!')
 			}
 		}
+		function make_sausage() {
+			if (your_money >= 13) {
+				if (your_fire >= 2) {
+					if (your_pork >= 3) {
+						if (your_spice >= 1) {
+							your_sausage += 1;
+							your_money -= 13;
+							your_pork -= 3;
+							your_spice -= 1;
+							your_fire -= 2;
+							your_xp += 16;
+							document.getElementById("your_sausage").innerHTML = "Kolbászod: " + your_sausage;
+							document.getElementById("your_fire").innerHTML = "Tüzed: " + your_fire;
+							document.getElementById("your_pork").innerHTML = "Disznóhúsod: " + your_pork;
+							document.getElementById("your_spice").innerHTML = "fűszered: " + your_spice;
+							document.getElementById("your_money").innerHTML = "£" + your_money;
+							document.getElementById("your_xp").innerHTML = your_xp + "xp";
+						}
+						else{
+							alert("Nincs elég fűszered!")
+						}
+					}
+					else{
+						alert('Nincs elég tejed!')
+					}
+				}
+				else{
+					alert("Nincs elég tüzed!")
+				}
+			}
+			else{
+				alert('Nincs elég pénzed!')
+			}
+		}
+		function make_hurka() {
+			if (your_money >= 13) {
+				if (your_fire >= 2) {
+					if (your_pork >= 3) {
+						if (your_spice >= 1) {
+							if (your_rice >= 2) {
+								your_hurka += 1;
+								your_money -= 13;
+								your_pork -= 2;
+								your_spice -= 1;
+								your_rice -= 2;
+								your_fire -= 2;
+								your_xp += 16;
+								document.getElementById("your_sausage").innerHTML = "Kolbászod: " + your_sausage;
+								document.getElementById("your_fire").innerHTML = "Tüzed: " + your_fire;
+								document.getElementById("your_pork").innerHTML = "Disznóhúsod: " + your_pork;
+								document.getElementById("your_spice").innerHTML = "Fűszered: " + your_spice;
+								document.getElementById("your_rice").innerHTML = "Rizsed: " + your_rice;
+								document.getElementById("your_money").innerHTML = "£" + your_money;
+								document.getElementById("your_xp").innerHTML = your_xp + "xp";
+							}
+							else{
+								alert("Nincs elég Rizsed!")
+							}
+						}
+						else{
+							alert("Nincs elég fűszered!")
+						}
+					}
+					else{
+						alert('Nincs elég tejed!')
+					}
+				}
+				else{
+					alert("Nincs elég tüzed!")
+				}
+			}
+			else{
+				alert('Nincs elég pénzed!')
+			}
+		}
+		function make_flour() {
+			if (your_money >= 13) {
+				if (your_fire >= 1) {
+					if (your_wheat >= 2) {
+						your_flour += 1;
+						your_money -= 13;
+						your_wheat -= 2;
+						your_fire -= 1;
+						your_xp += 16;
+						document.getElementById("your_flour").innerHTML = "Liszted: " + your_flour;
+						document.getElementById("your_fire").innerHTML = "Tüzed: " + your_fire;
+						document.getElementById("your_wheat").innerHTML = "Búzád: " + your_wheat;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						document.getElementById("your_xp").innerHTML = your_xp + "xp";
+					}
+					else{
+						alert('Nincs elég tejed!')
+					}
+				}
+				else{
+					alert("Nincs elég tüzed!")
+				}
+			}
+			else{
+				alert('Nincs elég pénzed!')
+			}
+		}
+		function make_cornflour() {
+			if (your_money >= 13) {
+				if (your_fire >= 1) {
+					if (your_corn >= 1) {
+						your_cornflour += 1;
+						your_money -= 13;
+						your_corn -= 1;
+						your_fire -= 1;
+						your_xp += 16;
+						document.getElementById("your_cornflour").innerHTML = "Kukoricaliszted: " + your_flour;
+						document.getElementById("your_fire").innerHTML = "Tüzed: " + your_fire;
+						document.getElementById("your_corn").innerHTML = "Kukoricád: " + your_corn;
+						document.getElementById("your_money").innerHTML = "£" + your_money;
+						document.getElementById("your_xp").innerHTML = your_xp + "xp";
+					}
+					else{
+						alert('Nincs elég tejed!')
+					}
+				}
+				else{
+					alert("Nincs elég tüzed!")
+				}
+			}
+			else{
+				alert('Nincs elég pénzed!')
+			}
+		}
+
 
 //----------------------------------GROWING-------------------------------------
 
